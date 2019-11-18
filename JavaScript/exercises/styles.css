@@ -1,0 +1,261 @@
+:root {
+  --black: #1f1f1f;
+  --white: #e9e9e9;
+  --teal: #26d0ce;
+  --darkteal: #009391;
+  --blue: #1a2980;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--white);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  position: fixed;
+  z-index: 1;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  border: 1vw solid var(--black);
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: url("./images/hoach-le-dinh-96823.jpg"),
+    linear-gradient(-145deg, var(--blue), var(--teal));
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: overlay;
+  z-index: -1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+.credit-btn {
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 4px 6px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 3px;
+  opacity: 0.75;
+  transition: all 0.25s ease;
+}
+
+.credit-btn:hover {
+  opacity: 1;
+}
+
+.wrapper {
+  width: 60%;
+  text-align: center;
+}
+
+.inputs {
+  margin: 2vh 0;
+}
+
+input {
+  width: 100%;
+  padding: 1vh;
+  margin: 1vh;
+}
+
+button {
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 12px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: capitalize;
+  border: 0 none;
+  font-weight: 500;
+  line-height: 1.3;
+  appearance: none;
+  box-shadow: 0 2px 3px 0px var(--black);
+  background: linear-gradient(to bottom, var(--teal), var(--darkteal));
+  color: var(--black);
+}
+
+button:hover {
+  background: linear-gradient(to bottom, var(--teal) 15%, var(--darkteal) 80%);
+  box-shadow: 0 10px 2px -6px var(--black);
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  flex: 1 0 calc(50% - 50px);
+  margin: 0 25px 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border: rgba(181, 177, 16, 0.5) 1px solid;
+  padding: 10px;
+}
+
+.section p {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.section .center {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.section input {
+  padding: 10px;
+  background: rgba(181, 177, 16, 0.5);
+  border: none;
+  color: white;
+  width: 46%;
+}
+
+.section span {
+  display: block;
+  padding: 5px 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -15px;
+}
+
+.image {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  flex: 1 0 calc(25% - 15px);
+  width: 100px;
+  height: 300px;
+  margin: 0 15px 15px 0;
+  transition: all 0.25s ease;
+  text-indent: -9999px;
+}
+
+.image:not(:nth-child) {
+}
+
+.image.isHidden {
+  opacity: 0;
+}
+
+.buttons {
+  flex: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.buttons .btn {
+  background: rgba(150, 23, 104, 0.5);
+  border: none;
+  border-radius: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1em;
+  transition: all 0.25s ease;
+  margin-bottom: 10px;
+}
+
+.buttons .btn:focus {
+  outline: none;
+}
+
+.buttons .btn:hover {
+  background: rgba(150, 23, 104, 1);
+}
+
+.halfs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.half {
+  flex: 1 0 calc(50% - 30px);
+  min-width: calc(50% - 30px);
+  margin: 15px;
+}
+
+.hoverMe {
+  width: 100%;
+  height: 250px;
+  background: rgba(255, 0, 234, 0.25);
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainImage {
+  width: 100%;
+  max-height: 150px;
+}
+
+.content {
+  display: flex;
+}
+
+.content > div {
+  flex: 1;
+  max-height: 25vh;
+  overflow-x: auto;
+}
