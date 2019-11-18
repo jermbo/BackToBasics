@@ -49,3 +49,41 @@ This is targeted towards individuals who have been using JavaScript for one to t
 In each section you will be introduced to a topic, provided a definitions, examples, and end with some exercise.
 
 The exercises are intended to reinforce what was just learned. Please refer to the slides of that section for reference. We will be walking around to offer assitance if needed.
+
+## Language Fundamentals
+
+In this portion we will break down some of the fundamentals of the language. One thing I want you to take away is that a lot of this is programming fundamentals. I will do my best to point out the areas that are JavaScript specific and which are just programming basics.
+
+### Variables
+
+### Functions
+
+### Scope
+
+### Objects
+
+### Strings
+
+### Numbers
+
+### Coercion
+
+### Arrays
+
+#### Accessors
+
+#### Iterators
+
+#### Mutators
+
+### Arithmetic Operators
+
+### Assignment Operators
+
+### Logic Operators
+
+### Decision Making
+
+### The DOM
+
+### Events
