@@ -4,6 +4,7 @@
 
 - Intro
 - Who is this course for?
+- What to expect?
 - Language Fundamentals
   - Variables
   - Functions
@@ -36,3 +37,15 @@ I help run a non-profit dedicated to teaching kids to code called Code Palm Beac
 I am a FrontEnd Tech Lead and Community Lead at Cognizant Softvision.
 
 Above all, I am a husband and father.
+
+## Who is this course for?
+
+This corse is designed to reintroduce you to concepts that you might be using on a daily basis but don't really understand why.
+
+This is targeted towards individuals who have been using JavaScript for one to three years who want to take their knowledge to the next level.
+
+## What to expect?
+
+In each section you will be introduced to a topic, provided a definitions, examples, and end with some exercise.
+
+The exercises are intended to reinforce what was just learned. Please refer to the slides of that section for reference. We will be walking around to offer assitance if needed.
