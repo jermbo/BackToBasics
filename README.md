@@ -1,3 +1,3 @@
 # Back to Basics
 
-This is my repository for my workshops. 
+This is a repository for my workshops.
