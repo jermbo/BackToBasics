@@ -389,15 +389,126 @@ In file `02-functions/start/functions.js`, you will see a series of functions th
 
 ### Scope
 
+#### Definition
+
+**Scope** determines the visibility or accessibility of a variable or function of your code. There are four scopes in JavaScript.
+
+- Global
+- Local
+- Function
+- Block
+
+#### Global
+
+JavaScript has one global scope, **window**. Anything that is not written inside a local, function, or block scope can be accessed and altered by any scope in your code.
+
+```JavaScript
+const character = 'Bender';
+console.log(character); // "Bender"
+
+function getCharacter() {
+  console.log(character); // "Bender"
+}
+
+gerCharacter();
+```
+
+#### Local
+
+When declaring a variable inside a function, you are declaring it in a **local scope**. Every function has its own scope, so if you declare the same variable inside different functions you will not have an issue.
+
+```JavaScript
+// Global Scope
+const mainMessage = 'Welcome to the Future!';
+
+function UserInterface() {
+  // Local Scope 1
+  const user = 'Professor';
+
+  function logUser() {
+    // Local Scope 2
+    const now = new Date();
+    console.log(user + ' was logged at ' + now);
+    // Professor was logged at 5:15pm
+  }
+
+  logUser();
+}
+
+// Global Scope
+function NonUserInterface() {
+  // Local Scope 3
+  const user = 'Zap';
+  console.log(user); // Zap
+}
+
+UserInterface();
+```
+
+#### Function
+
+Variables declared inside a function are in it's scope and cannot be access outside that function.
+
+```JavaScript
+function scope() {
+  const inside = 'Yep, I am inside scope';
+  console.log(inside); // "Yep, I am inside scope"
+}
+scope();
+
+console.log(inside); // Reference Error: inside is not defined.
+```
+
+#### Block
+
+Introduced in ES6, a **block scope** is the area within curly brackets. Typically within an **if**, or **switch**, or **loops** are considered blocks.
+
+> `let` and `const` are block scoped variables.
+
+```JavaScript
+function futurama() {
+  const isAwesome = true;
+  if(isAwesome) {
+    var character1 = 'Fry';
+    let character2 = 'Bender';
+    const character3 = 'Leela';
+  }
+
+  console.log(character1); // "Fry"
+  console.log(character2); // Reference Error: character2 not defined
+  console.log(character3); // Reference Error: character3 not defined
+}
+```
+
+#### Comparison Table
+
+|                              | var      | let   | const |
+|------------------------------|----------|-------|-------|
+| reassigned                   | o        | o     | x     |
+| Scope                        | function | block | block |
+| Reference before declaration | o        | x     | x     |
+
+
+
 ### Objects
+
+#### Definition
 
 ### Strings
 
+#### Definition
+
 ### Numbers
+
+#### Definition
 
 ### Coercion
 
+#### Definition
+
 ### Arrays
+
+#### Definition
 
 #### Accessors
 
@@ -405,14 +516,26 @@ In file `02-functions/start/functions.js`, you will see a series of functions th
 
 #### Mutators
 
-### Arithmetic Operators
+### Arithmetic
 
-### Assignment Operators
+#### Definition Operators
 
-### Logic Operators
+### Assignment
 
-### Decision Making
+#### Definition Operators
 
-### The DOM
+### Logic
+
+#### Definition Operators
+
+### Decision
+
+#### Definition Making
+
+### The
+
+#### Definition DOM
 
 ### Events
+
+#### Definition
