@@ -113,11 +113,279 @@ const positionX = 'London'; // What's the connection?
 const uFavColor = 'Bananas'; // Weird. `u` as in User or UI?
 ```
 
-#### Exercise
+#### Exercise Time
 
 In file `01-vars/start/vars.js`, you will see a series of variables that need names. Change the `var` key word to an appropriate `let` or `const` and create meaningful names.
 
 ### Functions
+
+#### Definition
+
+Generally speaking, a **function** is a "subprogram" that can be **called** by code external to the function.
+
+A function is composed of a sequence of statements called the **function body**.
+
+Data can be **optionally passed** into a function and a function can **optionally return** data.
+
+There are a couple of different ways to write a function. Here are a some more common ways you will see in the wild.
+
+- Anonymous
+- Declaration
+- Expression
+- Arrow
+
+#### Anonymous
+
+Simply put, an **anonymous** function is a function without a name.
+
+```JavaScript
+(function(){
+  // do stuff
+})();
+```
+
+#### Declaration
+
+A **function declaration** is a function with a **name**. These follow very similar rules to variables and can be called later in your code by referring to the name provided.
+
+```JavaScript
+function addTwo(num1, num2) {
+  return num1 + num2;
+}
+```
+
+#### Expression
+
+A **function expression** is a function where an expression should be. (An expression is the right hand side of the equals sign.)
+
+```JavaScript
+const addTwo = function(num1, num2) {
+  return num1 + num2;
+}
+```
+
+#### Arrow
+
+**Arrow functions** are syntax sugar and have unique properties to them. (More on why later.)
+
+---BUILD ARROW FUNCTION VISUAL---
+
+```JavaScript
+const addTwo = (num1, num2) => num1 + num2;
+```
+
+#### Invoke
+
+In order to get a block of code to run, the function needs to be **invoked**. Other synonyms include; **call**, **trigger**, **run**.
+
+All you have to do to **run** a function is **refer to it via its name along with a pair of parentheses**.
+
+```JavaScript
+addTwo(2,5);
+```
+
+#### Parameters / Arguments
+
+**Parameters** are a set of **variables** that will affect how your function runs. You **define parameters** when you create your function by adding a **comma separated list** of names that represent the value they will **eventually hold**.
+
+**Arguments** are what you **pass into** the function to alter the outcome. **Arguments** match **one to one** the parameter list.
+
+```JavaScript
+function divideTwo(numOne, numTwo) {
+  return numOne / numTwo;
+}
+
+function cubeMe(num) {
+  return num * num * num;
+}
+
+console.log( divideTwo(10, 5) );
+console.log( cubeMe(4) );
+```
+
+```JavaScript
+function divideTwo(10, 5) {
+  return numOne / numTwo;
+}
+
+function cubeMe(4) {
+  return num * num * num;
+}
+
+console.log( divideTwo(10, 5) );
+console.log( cubeMe(4) );
+```
+
+```JavaScript
+function divideTwo(10, 5) {
+  return 10 / 5;
+}
+
+function cubeMe(4) {
+  return 4 * 4 * 4;
+}
+
+console.log( divideTwo(10, 5) );
+console.log( cubeMe(4) );
+```
+
+```JavaScript
+function divideTwo(10, 5) {
+  return 2;
+}
+
+function cubeMe(4) {
+  return 64;
+}
+
+console.log( divideTwo(10, 5) );
+console.log( cubeMe(4) );
+```
+
+```JavaScript
+function divideTwo(10, 5) {
+  return 2;
+}
+
+function cubeMe(4) {
+  return 64;
+}
+
+console.log( 2 );
+console.log( 64 );
+```
+
+#### Callback
+
+A **callback** is a function that is **passed** as an **argument**.
+
+All **callbacks** are **functions**. But not all **functions** are **callbacks**.
+
+Only when a **function** is passed as an **argument** is when it is known as a **callback**.
+
+##### Alert
+
+```JavaScript
+function greetUser (cb, userName) {
+  cb('Hello ' + userName);
+}
+
+greetUser (alert, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (alert, 'Jermbo') {
+  cb('Hello ' + userName);
+}
+
+greetUser (alert, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (alert, 'Jermbo') {
+  alert('Hello ' + 'Jermbo');
+}
+
+greetUser (alert, 'Jermbo');
+```
+
+##### Anonymous Function
+
+```JavaScript
+function greetUser (cb, userName) {
+  cb('Hello ' + userName);
+}
+
+greetUser (function (msg) {
+  console.log(msg);
+}, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (function, 'Jermbo') {
+  cb('Hello ' + userName);
+}
+
+greetUser (function (msg) {
+  console.log(msg);
+}, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (function, 'Jermbo') {
+  function('Hello ' + 'Jermbo');
+}
+
+greetUser (function (msg) {
+  console.log(msg);
+}, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (function, 'Jermbo') {
+  function('Hello ' + 'Jermbo');
+}
+
+greetUser (function ('Hello Jermbo') {
+  console.log(msg);
+}, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (function, 'Jermbo') {
+  function('Hello ' + 'Jermbo');
+}
+
+greetUser (function ('Hello Jermbo') {
+  console.log('Hello Jermbo');
+}, 'Jermbo');
+```
+
+##### Function Declaration
+
+```JavaScript
+function greetUser (cb, userName) {
+  cb('Hello ' + userName);
+}
+function logStuff (msg) {
+  console.log(msg);
+}
+greetUser(logStuff, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (logStuff, 'Jermbo') {
+  cb('Hello ' + userName);
+}
+function logStuff (msg) {
+  console.log(msg);
+}
+greetUser(logStuff, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (logStuff, 'Jermbo') {
+  logStuff('Hello ' + 'Jermbo');
+}
+function logStuff ('Hello Jermbo') {
+  console.log(msg);
+}
+greetUser(logStuff, 'Jermbo');
+```
+
+```JavaScript
+function greetUser (logStuff, 'Jermbo') {
+  logStuff('Hello ' + 'Jermbo');
+}
+function logStuff ('Hello Jermbo') {
+  console.log('Hello Jermbo');
+}
+greetUser(logStuff, 'Jermbo');
+```
+
+#### Exercise Time
+
+In file `02-functions/start/functions.js`, you will see a series of functions that need names and parameters. Remember, function names follow very similar rules to variables.
 
 ### Scope
 
