@@ -488,11 +488,104 @@ function futurama() {
 | Scope                        | function | block | block |
 | Reference before declaration | o        | x     | x     |
 
-
-
 ### Objects
 
 #### Definition
+
+**Objects** are a set of **key:value** pairs. You can associate objects with real world items.
+
+For example, a **vehicle** is an **object**. All vehicles have the same **properties** and **methods**, but the values **differ between different vehicle**.
+
+```JavaScript
+const myCar = {
+  model: 'I-280',
+  make: 'Izuzu',
+  year: 2011,
+  color: 'Black',
+  transmission: 'standard',
+  numberOfWheels: 4,
+  accelerate: () => {
+    // make car go faster
+  },
+  decelerate: () => {
+    // make car go slower
+  },
+  addFuel: (type, amount) => {
+    // add fuel of type to tank.
+  }
+}
+```
+
+#### Properties and Methods
+
+**Properties** are like a variable, they store a value. Your care might have a different make, so your cars ***make* property** will reflect accordingly.
+
+**Methods** are like functions, they do something. Again, since  your car is different, the type and amount of fuel you require will be different.
+
+*Note* **Properties** are **variables**, just associated with an **object**. 
+
+*Note* **Methods** are **functions**, just associated with an **object**.
+
+#### Dot Notation
+
+There are **two** ways to access a property or method of an object. The first way is use the **dot notation**.
+
+```JavaScript
+console.log( myCar.make ); // Izuzu
+console.log( myCar.year ); // 2011
+myCar.accelerate(); // "going faster"
+```
+
+#### Bracket Notation
+
+The second way to access properties or methods is by using the **bracket notation**.
+
+```JavaScript
+console.log( myCar['make'] ); // Izuzu
+
+const prop = 'year';
+console.log( myCar[prop] ); // 2011
+
+const method = 'accelerate';
+myCar[method](); // "going faster"
+```
+
+#### Bracket Notation Use Case 1
+
+There are two use cases that would require you to use the bracket notation over the dot notation. The first, most straight forward reason, is the object key has a space or character not allowed in  a variable name. 
+
+```JavaScript
+const special = {
+  'Key One': 'The First Value',
+  'Key-ID': 1234,
+  'the.func': () => { console.log('the func') }
+};
+
+// Incorrect
+// Cannot access a key with a space
+console.log(special.Key One);
+// Cannot access a key with a dash
+console.log(special.Key-ID);
+// Cannot access a key with a dot
+console.log(special.the.func);
+
+// Correct
+console.log(special['Key One']); // "The First Value"
+console.log(special['Key-ID']); // 1234
+console.log(special['the.func']); // "the func"
+```
+
+#### Bracket Notation Use Case 2
+
+The second use case is accessing an item based on user input. 
+Let's say we have an interface that allows the user to change the values of each property on their car. We have a **keyInput** select that maps to each property in the object. When the user selects it, it will reflect the property chosen and allow the user to change the value.
+
+```JavaScript
+const userKey = keyInput.value;
+const userValue = valInput.value;
+
+myCar[userKey] = newValue;
+```
 
 ### Strings
 
