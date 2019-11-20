@@ -744,6 +744,26 @@ console.log(123e5); // 12300000
 console.log(123e-5); // 0.00123
 ```
 
+#### ParseInt
+
+**.parseInt()** takes a string argument and returns an integer.
+
+This method will convert the string to a whole number, regardless of decimals that might exist. If alpha characters will be ignored and will terminate the rest of that parse at first sign.
+
+```JavaScript
+const age = '123';
+const height = '5.5';
+const pi = '3.141';
+const test1 = '123abc123';
+const test2 = 'abc123';
+
+console.log( parseInt(age) ); // 123
+console.log( parseInt(height) ); // 5 
+console.log( parseInt(pi) ); // 3
+console.log( parseInt(test1) ); // 123
+console.log( parseInt(test2) ); // NaN
+```
+
 ### Coercion
 
 #### Definition
