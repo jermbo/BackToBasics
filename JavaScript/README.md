@@ -601,6 +601,51 @@ console.log('hello');
 const userName = "Bender";
 console.log( userName ); // "Bender"
 ```
+
+#### Concatenation
+
+**Concatenation** is the operation of join character strings end-to-end.
+
+```JavaScript
+console.log('Futur' + "ama"); // "Futurama"
+
+const sport = "Blitz";
+const type = 'ball';
+console.log( sport + type ); // "Blitzball"
+```
+
+#### Template Literals
+
+**Template Literals** are string literals allowing embedded expressions. This supports **string interpolation** as well as **multi-line** strings.
+
+```JavaScript
+const num1 = 4;
+const num2 = 2; 
+console.log(`${num1} + ${num2} = ${num1 + num2}`); // "4 + 2 = 6"
+```
+
+```JavaScript
+const user = {
+  first: "Phillip",
+  last: "Fry"
+};
+console.log(`${user.first} ${user.last}`); // "Phillip Fry"
+```
+
+```JavaScript
+const posts = [
+  { title: "post 1", desc: "this is a desc" },
+  { title: "post 2", desc: "this is a desc2" },
+];
+
+const postsHTML = posts.map((post, index) => {
+  return `<article id="post-${index}>
+    <h1>${post.title}<h1>
+    <div>${post.title}<div>
+  </article>`;
+}).join('');
+```
+
 ### Numbers
 
 #### Definition
