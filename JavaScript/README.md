@@ -646,6 +646,27 @@ const postsHTML = posts.map((post, index) => {
 }).join('');
 ```
 
+#### NOTE
+
+Pretty much everything can be thought of as an object in JavaScript. **String** is no exception, as this has a set of **properties** and **methods** at your disposal.
+
+#### Length Property
+
+We can tell how many characters are in a string by accessing its **length** property.
+
+*Note:* spaces and other hidden characters are valid characters and will contribute to the length.
+
+```JavaScript
+console.log( " Hello world!   ".length ); // 16
+const userName = "Bender";
+console.log( userName.length ); // 6
+
+if( userName.length > 5 ){
+  console.log(`Username is ${userName.length} characters long`);
+  // "Username is 6 characters long"
+}
+```
+
 ### Numbers
 
 #### Definition
