@@ -591,6 +591,16 @@ myCar[userKey] = newValue;
 
 #### Definition
 
+A **string** is any set of characters **between quotes**, either single or quotes.
+
+You can use either at any time, just be aware **what you start with you must end with**.
+
+```JavaScript
+console.log('hello');
+
+const userName = "Bender";
+console.log( userName ); // "Bender"
+```
 ### Numbers
 
 #### Definition
