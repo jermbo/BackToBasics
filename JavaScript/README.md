@@ -1010,6 +1010,17 @@ console.log( characters.pop() ); //  "Hermies"
 console.log( characters ); // ["Fry", "Leela", "Bender", "Professor"]
 ```
 
+##### Push
+
+**.push()** adds items to the end of an array. You can pass multiple items, separated by commas. Once the item(s) is added, the new length will be returned.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.push('Zapp') ); // 6
+console.log( characters ); // ["Fry", "Leela", "Bender", "Professor", "Hermies", "Zapp"]
+```
+
 ### Arithmetic
 
 #### Definition Operators
