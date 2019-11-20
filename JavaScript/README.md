@@ -971,6 +971,28 @@ const todoNames = todos.map(todo => todo.name);
 console.log( todoNames ); // ["Wake up", "Drink Coffee", "Code JavaScript", "Drink more coffee"]
 ```
 
+##### Filter
+
+**.filter()** creates a new array with all the elements that **pass the test** in the provided callback.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+const longNames = characters.filter(character => character.length > 5 );
+console.log( characters );  // ["Fry", "Leela", "Bender", "Professor", "Hermies"]
+console.log( longNames ); // ["Bender", "Professor", "Hermies"]
+```
+
+```JavaScript
+var todos = [
+  { id: 1, name: 'Wake up', completed: true },
+  { id: 2, name: 'Drink Coffee', completed: true },
+  { id: 3, name: 'Code JavaScript', completed: false },
+  { id: 4, name: 'Drink more coffee', completed: false }
+];
+var stillTodo = todos.filter(todo => !todo.completed );
+console.log( stillTodo ); // [{completed: false, id: 3, name: "Code JavaScript"}, {completed: false, id: 4, name: "Drink more coffee" }]
+```
+
 #### Mutators
 
 ### Arithmetic
