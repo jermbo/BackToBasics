@@ -835,6 +835,34 @@ As JavaScript developers we run into this all the time. When we get to the logic
 
 #### Definition
 
+Consider the following code.
+
+```JavaScript
+const name1 = 'Fry';
+const name2 = 'Leela'; 
+const name3 = 'Bender';
+const name4 = 'Professor';
+const name5 = 'Hermies';
+```
+
+Creating variables is fine, but this can get out of hand quickly. Are you going to create a new variable for every character on that show? How would you search or sort them? How would you add or remove some programmatically?
+
+Short answer, you can't. This is where arrays come into play.
+
+**Arrays** are used to store **multiple values** iin a **single variable**.
+
+Let's reconsider the previous example and make it an array.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+```
+
+You can access any item in the array by pointing it via its **index number**. 
+
+#### Note
+
+Array indexing starts a **zero**. The **first index** in the array reflects the **second item**.
+
 #### Accessors
 
 #### Iterators
