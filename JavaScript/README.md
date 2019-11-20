@@ -824,6 +824,13 @@ console.log(['yes', 'yes'] - ['yall']); // NaN
 console.log([5] * 10); // 50
 console.log('50' / 10); // 5
 ```
+
+Notice all the arithmetic operations kinda work as expected, except for one.
+
+This is because the symbol used for addition is the same symbol used for concatenation.
+
+As JavaScript developers we run into this all the time. When we get to the logic section, we will see how this plays out in a different way.
+
 ### Arrays
 
 #### Definition
