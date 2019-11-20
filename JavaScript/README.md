@@ -931,6 +931,24 @@ console.log( characters.slice(0, 3) ); // ["Fry", "Leela", "Bender"]****
 
 #### Iterators
 
+**Iterators** are a set of methods that **cycle through each item** in an array and **perform the action specified in the callback**.
+
+There are a dozen or so methods one has access to, but we are going to explore ones that I use most frequently in my day to day work.
+
+*Note:* Each callback will be passed these three arguments, regardless if they are used or not. **CurrentValue**, **index**, **Original Array**.
+
+##### ForEach
+
+**.forEach()** **executes** a provided function once for **each element** in the array.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+characters.forEach( ( character ) => {
+  console.log( character );
+});
+```
+
 #### Mutators
 
 ### Arithmetic
