@@ -806,6 +806,24 @@ console.log( (numOne/numTwo).toFixed(4) ); // "0.5714"
 
 #### Definition
 
+**Coercion** is a way to change an entity from one **datatype** to **another**.
+
+This is a controversial topic in JavaScript. Is this a flaw in the language? Is that a feature that should be embraced? Is it a little of both?
+
+My stance is, it's a useful tool that should be embraced. It's one of my favorite things about the language, until it isn't.
+
+
+```JavaScript
+console.log( 10 + "10" ); // "1010"
+console.log( "5" + 15 ); // "515"
+console.log( 5 - "2"); // 3
+console.log( "20" - "10"); // 10
+console.log(['Hello', 'World'] + ['Glad', 'to', 'be', 'alive']); // "Hello,WorldGlad,to,be,alive"
+console.log([6] - 2); // 4
+console.log(['yes', 'yes'] - ['yall']); // NaN
+console.log([5] * 10); // 50
+console.log('50' / 10); // 5
+```
 ### Arrays
 
 #### Definition
