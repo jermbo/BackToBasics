@@ -667,6 +667,28 @@ if( userName.length > 5 ){
 }
 ```
 
+#### toUpperCase
+
+**.toLowerCase()** returns the calling string converting every alpha character to lowercase.
+
+This is extremely useful when validating user input and data you may have an a database.
+
+```JavaScript
+const greeting = ' HellO HuMAn    ';
+console.log( greeting.toLowerCase() ); // " hello human    "
+```
+
+#### toLowerCase
+
+**.toUpperCase()** returns the calling string converting every alpha character to uppercase.
+
+Another tool to ensure consistency when trying to validate strings.
+
+```JavaScript
+const greeting = ' HellO HuMAn    ';
+console.log( greeting.toUpperCase() ); // " HELLO HUMAN    "
+```
+
 ### Numbers
 
 #### Definition
