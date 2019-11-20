@@ -892,6 +892,19 @@ console.log( characters.includes('Professor') ); // true
 console.log( characters.includes('Zapp') ); // false
 ```
 
+##### IndexOf
+
+**.indexOf()** returns the **first index** at which the provided element can be found in the array. If nothing is found, a **-1** will be returned.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.indexOf('Fry') ); // 0
+console.log( characters.indexOf('fry') ); // -1
+console.log( characters.indexOf('Professor') ); // 3
+console.log( characters.indexOf('Zapp') ); // -1
+```
+
 #### Iterators
 
 #### Mutators
