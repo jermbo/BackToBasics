@@ -875,6 +875,23 @@ We can break down each Array method into three categories.
 
 #### Accessors
 
+These sets of methods do not modify the original array, instead they return some representation of the array in use.
+
+There are a dozen or so methods one has access to, but we are going to explore the ones I tend to use most frequently in day to day work.
+
+##### Includes
+
+**.includes()** determines wether an array **includes the provided element**, returning **true** or **false** where appropriate.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.includes('Fry') ); // true
+console.log( characters.includes('fry') ); // false
+console.log( characters.includes('Professor') ); // true
+console.log( characters.includes('Zapp') ); // false
+```
+
 #### Iterators
 
 #### Mutators
