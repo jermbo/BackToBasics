@@ -1021,6 +1021,28 @@ console.log( characters.push('Zapp') ); // 6
 console.log( characters ); // ["Fry", "Leela", "Bender", "Professor", "Hermies", "Zapp"]
 ```
 
+##### Shift
+
+Similarly to the pop method, **.shift()** removes an item from the beginning of the array. This also returns the item that has been removed as well as modifies the length of the array.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.shift() ); // "Fry"
+console.log( characters ); // ["Leela", "Bender", "Professor", "Hermies"]
+```
+
+##### Unshift
+
+Similarly to the push method, **.unshift()** will add an item to the beginning of an array. You can pass multiple items, separated by commas. Once the item(s) is added, the new length will be returned.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.unshift('Zapp') ); // 6
+console.log( characters ); // ["Zapp", "Fry", "Leela", "Bender", "Professor", "Hermies"]
+```
+
 ### Arithmetic
 
 #### Definition Operators
