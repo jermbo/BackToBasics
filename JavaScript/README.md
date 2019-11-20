@@ -788,6 +788,20 @@ console.log( parseInt(test2) ); // NaN
 
 When pulling **anything** from an input field, it will be a **string**. Use either method when dealing with numerical user input.
 
+#### ToFixed
+
+**.toFixed()** formats a number to a desired decimal length. This method requires the number of decimals places you want as its only argument.
+
+```JavaScript
+const price = 23;
+const numOne = 4;
+const numTwo = 7;
+
+console.log( price.toFixed(2) ); // "23.00"
+console.log( numOne / numTwo ); // 0.5714285714285714
+console.log( (numOne/numTwo).toFixed(4) ); // "0.5714"
+```
+
 ### Coercion
 
 #### Definition
