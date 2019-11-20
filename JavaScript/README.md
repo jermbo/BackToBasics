@@ -995,6 +995,21 @@ console.log( stillTodo ); // [{completed: false, id: 3, name: "Code JavaScript"}
 
 #### Mutators
 
+**Mutators** are a set of methods that change the original array and returns the information what was changed.
+
+There are a dozen or so methods we have access to, but we are going to explore ones I use most frequently in my day to day.
+
+##### Pop
+
+**.pop()** removes one item from the end of the array. Once the item is removed, it will return the element and change the length of the array.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.pop() ); //  "Hermies"
+console.log( characters ); // ["Fry", "Leela", "Bender", "Professor"]
+```
+
 ### Arithmetic
 
 #### Definition Operators
