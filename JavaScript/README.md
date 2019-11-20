@@ -1043,25 +1043,66 @@ console.log( characters.unshift('Zapp') ); // 6
 console.log( characters ); // ["Zapp", "Fry", "Leela", "Bender", "Professor", "Hermies"]
 ```
 
+##### Splice
+
+**.splice()** changes the contents of an array by removing existing items and or adding new ones. 
+
+Splice at bare minimum accepts one argument, which represents the starting index. If the second argument is not provided, it will remove the rest in the array after that starting index.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log(characters.splice(1,3)); // ["Leela", "Bender", "Professor"]
+console.log(characters); // ["Fry", "Hermies"]
+console.log(characters.splice(1, 0, 'Leela', 'Bender', 'Professor')); // []
+console.log(characters); // ["Fry", "Leela", "Bender", "Professor", "Hermies"]
+console.log(characters.splice(3)); // ["Professor", "Hermies"]
+console.log(characters); // ["Fry", "Leela", "Bender"]
+```
+
 ### Arithmetic
 
-#### Definition Operators
+**Arithmetic** operators takes numeric values and performs the desired mathematical operation. The standard arithmetic operators are;
+
+- Addition ( + )
+- Subtraction ( - )
+- Multiplication ( * )
+- Division ( / )
+
+*Note:* You can group equations together to execute before other specified steps, as the rules of P.E.M.D.A.S apply. Parentheses first, then multiplication, then division, then addition, then subtraction.
+
+```JavaScript
+console.log( 1 + 2 ); // 3
+console.log( 100 - 45 ); // 55
+console.log( 20 * 3 ); // 60
+console.log( 16 / 2 + 6 ); // 14
+console.log( 16 / ( 2 + 6 ) ); // 2
+console.log( ( 100 - 75 ) + ( 25 * 2 ) ); // 75
+const min = 6;
+const max = 55;
+console.log( min * max ); // 330
+console.log( min - max ); // -49
+console.log( min + max ); // 61
+console.log( min / max ); // 0.10909090909090909
+```
+
+#### Definition
 
 ### Assignment
 
-#### Definition Operators
+#### Definition
 
 ### Logic
 
-#### Definition Operators
+#### Definition
 
 ### Decision
 
-#### Definition Making
+#### Definition
 
 ### The
 
-#### Definition DOM
+#### Definition
 
 ### Events
 
