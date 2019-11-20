@@ -905,6 +905,30 @@ console.log( characters.indexOf('Professor') ); // 3
 console.log( characters.indexOf('Zapp') ); // -1
 ```
 
+##### Join
+
+This method **joins** all the elements of an array into a **string**, separating the values by the provided **string separator**. If no separator is passed, then the items will be separated with commas.
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.join() ); // "Fry,Leela,Bender,Professor,Hermies"
+console.log( characters.join(' ') ); // "Fry Leela Bender Professor Hermies"
+console.log( characters.join('--') ); // "Fry--Leela--Bender--Professor--Hermies"
+```
+
+##### Slice
+
+This method returns a **shallow portion** of an array into a **new array**, selected from a **starting index** to an **ending index**, ending index not included. 
+
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+
+console.log( characters.slice(1, 4) ); // ["Leela", "Bender", "Professor"]
+console.log( characters.slice(2, 2) ); // []
+console.log( characters.slice(0, 3) ); // ["Fry", "Leela", "Bender"]****
+```
+
 #### Iterators
 
 #### Mutators
