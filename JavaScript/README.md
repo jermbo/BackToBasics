@@ -689,6 +689,43 @@ const greeting = ' HellO HuMAn    ';
 console.log( greeting.toUpperCase() ); // " HELLO HUMAN    "
 ```
 
+#### trim
+
+**.trim()** removes any **leading** and **trailing** whitespace from the string.
+
+**Whitespace** in this context is all invisible characters that add space to your string. **Space**, **tab**, **no-break space**, and all line terminator characters.
+
+```JavaScript
+const greeting = ' HellO HuMAn    ';
+console.log( greeting.trim() ); // "HellO HuMAn"
+```
+
+#### Chainable
+
+Most methods in JavaScript are **chainable**, meaning you can keep adding methods to the end of the line and the value will be passed into each sequentially.
+
+```JavaScript
+const greeting = ' HellO HuMAn    ';
+console.log( greeting.trim().toLowerCase() ); // "hello human"
+```
+
+#### split
+
+**.split()** turns the string into an **array of string** by separating the string into strings. 
+
+How it's broken up is determined by the **separator string** provided as the **argument**.
+
+```JavaScript
+const date = "10-26-1997"; // Marlins first world series win
+console.log( date.split('-') ); // ["10", "26", "1997"]
+
+const name = "Bender Bending Rodriguez";
+console.log( name.split(' ') ); // ["Bender", "Bending", "Rodriguez"]
+
+const secretCode = "IMG:abcdefg:101010D:!@#$%^&*()";
+console.log( secretCode.split(':') ); // ["IMG", "abcdefg", "101010D", "!@#$%^&*()"]
+```
+
 ### Numbers
 
 #### Definition
