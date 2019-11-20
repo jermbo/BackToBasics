@@ -764,6 +764,30 @@ console.log( parseInt(test1) ); // 123
 console.log( parseInt(test2) ); // NaN
 ```
 
+#### ParseFloat
+
+**.parseFloat()** takes a string argument and returns a decimal integer.
+
+If alpha characters will be ignored and will terminate the rest of that parse at first sign.
+
+```JavaScript
+const age = '123';
+const height = '5.5';
+const pi = '3.141';
+const test1 = '123.456abc123';
+const test2 = 'abc123.456';
+
+console.log( parseInt(age) ); // 123
+console.log( parseInt(height) ); // 5.5
+console.log( parseInt(pi) ); // 3.141
+console.log( parseInt(test1) ); // 123.456
+console.log( parseInt(test2) ); // NaN
+```
+
+#### Note
+
+When pulling **anything** from an input field, it will be a **string**. Use either method when dealing with numerical user input.
+
 ### Coercion
 
 #### Definition
