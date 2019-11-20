@@ -730,6 +730,20 @@ console.log( secretCode.split(':') ); // ["IMG", "abcdefg", "101010D", "!@#$%^&*
 
 #### Definition
 
+Currently, JavaScript has only **one type** of number. **Numbers** can be written **with** or **without** decimals and can be either **positive** or **negative**.
+
+```JavaScript
+const age = 123;
+const height = -5.5;
+const pi = 3.141;
+
+console.log(age); // 123
+console.log(height); // -5.5
+console.log(pi); // 3.141
+console.log(123e5); // 12300000
+console.log(123e-5); // 0.00123
+```
+
 ### Coercion
 
 #### Definition
