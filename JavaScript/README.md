@@ -863,6 +863,16 @@ You can access any item in the array by pointing it via its **index number**.
 
 Array indexing starts a **zero**. The **first index** in the array reflects the **second item**.
 
+#### Array Methods
+
+As most things in JavaScript, **Arrays** are object like. Meaning, we have access to a set of **properties** and **methods** at our disposal.
+
+We can break down each Array method into three categories.
+
+- Accessors
+- Iterators
+- Muators
+
 #### Accessors
 
 #### Iterators
