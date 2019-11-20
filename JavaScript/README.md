@@ -949,6 +949,28 @@ characters.forEach( ( character ) => {
 });
 ```
 
+##### Map
+
+**.map()** creates a **new array** with the results from the callback on every element in the array.
+
+```JavaScript
+const numbers = [1,2,3,4];
+const doubles = numbers.map(x => x * 2);
+console.log( numbers ); // [1,2,3,4]
+console.log( doubles ); // [2,4,6,8]
+```
+
+```JavaScript
+const todos = [
+  { id: 1, name: 'Wake up', completed: true },
+  { id: 2, name: 'Drink Coffee', completed: true },
+  { id: 3, name: 'Code JavaScript', completed: false },
+  { id: 4, name: 'Drink more coffee', completed: false }
+];
+const todoNames = todos.map(todo => todo.name);
+console.log( todoNames ); // ["Wake up", "Drink Coffee", "Code JavaScript", "Drink more coffee"]
+```
+
 #### Mutators
 
 ### Arithmetic
