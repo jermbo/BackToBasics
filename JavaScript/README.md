@@ -17,12 +17,18 @@
     - Accessors
     - Iterators
     - Mutators
-  - Arithmetic Operators
-  - Assignment Operators
-  - Logic Operators
-  - Decision Making
+  - Looping
+  - Conditions
   - The DOM
   - Events
+- Advanced Topics
+  - Spread, rest
+  - Mutation vs. immutable
+  - Promises + Async + Await
+  - Design Patterns
+    - Module
+    - Revealing Module
+    - Classes
 
 ## Intro
 
@@ -48,7 +54,9 @@ This is targeted towards individuals who have been using JavaScript for one to t
 
 In each section you will be introduced to a topic, provided a definitions, examples, and end with some exercise.
 
-The exercises are intended to reinforce what was just learned. Please refer to the slides of that section for reference. We will be walking around to offer assitance if needed.
+The exercises are intended to reinforce what was just learned. Please refer to the slides of that section for reference. We will be walking around to offer assistance if needed.
+
+All the code and topics covered will be for native browser implementation. No build tools will be required nor will any server code be created.
 
 ## Language Fundamentals
 
@@ -483,7 +491,7 @@ function futurama() {
 #### Comparison Table
 
 |                              | var      | let   | const |
-|------------------------------|----------|-------|-------|
+| ---------------------------- | -------- | ----- | ----- |
 | reassigned                   | o        | o     | x     |
 | Scope                        | function | block | block |
 | Reference before declaration | o        | x     | x     |
@@ -1062,6 +1070,8 @@ console.log(characters); // ["Fry", "Leela", "Bender"]
 
 ### Arithmetic
 
+#### Definition
+
 **Arithmetic** operators takes numeric values and performs the desired mathematical operation. The standard arithmetic operators are;
 
 - Addition ( + )
@@ -1086,24 +1096,113 @@ console.log( min + max ); // 61
 console.log( min / max ); // 0.10909090909090909
 ```
 
-#### Definition
-
-### Assignment
+### Looping 
 
 #### Definition
 
-### Logic
+Loops are a way to do something repeatedly. Typically these are used to access each item in an array, but they have other use cases as well. 
+
+#### While Loops
+
+A **while** loop executes its statements as long as a specified condition evaluates to true.
+
+```JavaScript
+while ( condition ) {
+  // block of code to be executed
+}
+```
+
+```JavaScript
+let i;
+let text = '';
+
+while( i < 10 ) {
+  text += `The number is ${i}`;
+  i++;
+}
+```
+
+*Note:* While loops are easy to create **infinite** loops. Use with caution and always remember to create a flag that will evaluate to false, eventually.
+
+#### For Loops
+
+#### For...in Loops
+
+#### For...of Loops
+
+#### Increment | Decrement
+
+It's common to want to increment, or decrement, one number at a time. To increment by one you simply use **++** at the end of your variable. Conversely, you add **--** to the end of your variable to decrement by one.
+
+Typically, we see these in loops but that is not the only place this can be used.
+
+```JavaScript
+let startPoint = 0;
+console.log( startPoint ); // 0
+startPoint++;
+console.log( startPoint ); // 1
+startPoint++;
+console.log( startPoint ); // 2
+startPoint++;
+console.log( startPoint ); // 3
+```
+
+```JavaScript
+let totalLife = 100;
+console.log( totalLife ); // 100
+totalLife--;
+console.log( totalLife ); // 99
+totalLife--;
+console.log( totalLife ); // 98
+totalLife--;
+console.log( totalLife ); // 97
+
+for( let i = 0; i < 10; i++ ){
+  console.log(i);
+}
+```
+
+
+
+
+### Conditions 
 
 #### Definition
 
-### Decision
-
-#### Definition
-
-### The
+### The DOM
 
 #### Definition
 
 ### Events
+
+#### Definition
+
+## Advanced Topics
+
+### Spread, rest
+
+#### Definition
+
+### Mutation vs. immutable
+
+#### Definition
+
+### Promises + Async + Await
+
+#### Definition
+
+### Design Patterns
+
+#### Definition
+
+#### Module
+
+#### Definition
+
+#### Revealing Module
+
+#### Definition
+
+#### Classes
 
 #### Definition
