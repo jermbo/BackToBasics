@@ -1199,15 +1199,20 @@ for ( let i = 0; i < characters.length; i++ ) {
 document.body.innerHTML = output;
 ```
 
+#### For...in Loops
+
+A **for...in** statement loops through the properties of an object.
+
 ```JavaScript
-let startPoint = 0;
-console.log( startPoint ); // 0
-startPoint++;
-console.log( startPoint ); // 1
-startPoint++;
-console.log( startPoint ); // 2
-startPoint++;
-console.log( startPoint ); // 3
+const myCar = {
+  make: 'Izuzu',
+  model: 'i280',
+  year: '2011'
+};
+
+for (let key in oldCar) {
+  console.log(`${key} --> ${oldCar[key]}`);
+}
 ```
 
 ```JavaScript
