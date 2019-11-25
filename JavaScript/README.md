@@ -1156,6 +1156,19 @@ while( i < 10 ) {
 
 *Note:* While loops are easy to create **infinite** loops. Use with caution and always remember to create a flag that will evaluate to false, eventually.
 
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+let i = 0;
+let output = '';
+
+while ( characters[i] ) {
+  output += `<p>${characters[i]}</p>`;
+  i++;
+}
+
+document.body.innerHTML = output;
+```
+
 #### For Loops
 
 #### For...in Loops
