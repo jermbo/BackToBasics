@@ -1347,6 +1347,43 @@ console.log( true <= 1 ); // true
 console.log( false <= 0); // true
 ```
 
+#### Logic Operators
+
+There are countless situations where we need **multiple values** to be true in order to execute some come. Or **only one condition** out of a set of possible conditions needs to be true.
+
+We have two operators at our disposal, **And** ( && ). **Or** ( || ).
+
+##### And Operator
+
+**And** operator validates to true if all conditions evaluate to true. 
+
+For example, only display a message that the account balance is low when; user is logged in **and** balance is less than one hundred dollars.
+
+```JavaScript
+const isLoggedIn = true;
+const balance = 500;
+if( isLogged && balance < 100 ){
+    console.log( `Greetings. Your low limit balance has been triggered. Your
+     balance is currently $${balance}.`);
+}
+```
+
+##### Or Operator
+
+**Or** operator validates to true if one condition evaluate to true. 
+
+For example, display a special user score animation if; the user sets a new high school **or** game is over.
+
+```JavaScript
+let playerScore = 1000;
+let currentHighScore = 2000;
+let stillPlaying = false;
+
+if( !stillPlaying || playerScore > currentHighScore ) {
+  console.log( playerScore ); // 1000
+}
+```
+
 ### The DOM
 
 #### Definition
