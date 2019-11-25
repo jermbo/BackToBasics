@@ -1215,23 +1215,27 @@ for (let key in oldCar) {
 }
 ```
 
-```JavaScript
-let totalLife = 100;
-console.log( totalLife ); // 100
-totalLife--;
-console.log( totalLife ); // 99
-totalLife--;
-console.log( totalLife ); // 98
-totalLife--;
-console.log( totalLife ); // 97
+#### For...of Loops
 
-for( let i = 0; i < 10; i++ ){
-  console.log(i);
+A **for...of** statement iterates over the values in an **iterable**.
+
+*Note*: **Iterable** is an object that can be looped over. Arrays, Strings, Maps, Sets, and NodeList are the most used. 
+
+```JavaScript
+const paragraphs = document.querySelectorAll('p'); // This stores a NodeList, which is an Iterable Object. 
+
+for( let p of paragraphs ) {
+  console.log(p.innerText);
 }
 ```
 
+```JavaScript
+const name = 'Jermbo'; // Also an Iterable Object
 
-
+for( let char of name ) {
+  console.log(char);
+}
+```
 
 ### Conditions 
 
