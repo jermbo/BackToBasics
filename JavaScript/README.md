@@ -1290,6 +1290,63 @@ console.log( 10 !== '10'); // true
 console.log( true !== 1 ); // true
 console.log( false !== 0); // true
 ```
+
+#### > vs <
+
+Each **relational operator** will call the `valueOf()` method on **each operand** before the comparison is made. 
+
+**Greater than** ( > ) operator returns **true** if the LHS is **greater than** the RHS.
+
+Conversely, **less than** ( < ) will return **true** if the LHS is **less than** the RHS.
+
+```JavaScript
+const userName = 'Jermbo';
+
+console.log( 1 > 1 ); // false
+console.log( 1 > '1'); // false
+console.log( 10 > 100 ); // false
+console.log( 'Hello' > 'hello'); // false
+console.log( userName > 'Jermbo'); // false
+console.log( true > 1 ); // false
+console.log( false > 0); // false
+```
+
+```JavaScript
+const userName = 'Jermbo';
+
+console.log( 1 < 1 ); // false
+console.log( 1 < '1'); // false
+console.log( 10 < 100 ); // true
+console.log( 'Hello' < 'hello'); // true
+console.log( userName < 'Jermbo'); // false
+console.log( true < 1 ); // false
+console.log( false < 0); // false
+```
+
+```JavaScript
+const userName = 'Jermbo';
+
+console.log( 1 >= 1 ); // true
+console.log( 1 >= '1'); // true
+console.log( 10 >= 100 ); // false
+console.log( 'Hello' >= 'hello'); // false
+console.log( userName >= 'Jermbo'); // true
+console.log( true >= 1 ); // true
+console.log( false >= 0); // true
+```
+
+```JavaScript
+const userName = 'Jermbo';
+
+console.log( 1 <= 1 ); // true
+console.log( 1 <= '1'); // true
+console.log( 10 <= 100 ); // true
+console.log( 'Hello' <= 'hello'); // true
+console.log( userName <= 'Jermbo'); // true
+console.log( true <= 1 ); // true
+console.log( false <= 0); // true
+```
+
 ### The DOM
 
 #### Definition
