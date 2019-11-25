@@ -1496,6 +1496,37 @@ nameDisplay.addEventListener('mouseover', () => console.log('hello'));
 
 #### Definition
 
+JavaScript is an **event based language**. Meaning, nothing happens until something is triggered.
+
+When you are browsing the web, your browser registers different types of events. It's the browsers way of saying, "Hey! This just happened. Do something if you want.", and your script can respond to that. 
+
+#### Add Event Listener
+
+To set up an event listener, you need to attach it to something. This can be a DOM element, the document, or the window itself.
+
+**.addEventListener()** accepts **two arguments**. The first is what you are listening for, the **eventType**. The second is what you want to do when that event happens, the **callback**.
+
+```JavaScript
+window.addEventListener('keypress', (e) => {
+  console.log(e.keyCode);
+});
+
+document.querySelector('#header').addEventListener('mouseover', (e) => {
+  e.target.classList.add('hovered')
+});
+
+const items = document.querySelectorAll('.items');
+items.forEach(item => item.addEventListener('click', handleItemClick));
+
+function handelItemClick(e) {
+  const parent = e.target;
+  parent.classList.add('clicked');
+  const title = parent.querySelector('h1');
+  title.innerText += ' clicked';
+}
+```
+
+
 ## Advanced Topics
 
 ### Spread, rest
