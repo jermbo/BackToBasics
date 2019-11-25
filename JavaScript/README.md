@@ -1096,6 +1096,38 @@ console.log( min + max ); // 61
 console.log( min / max ); // 0.10909090909090909
 ```
 
+#### Increment | Decrement
+
+It's common to want to increment, or decrement, one number at a time. To increment by one you simply use **++** at the end of your variable. Conversely, you add **--** to the end of your variable to decrement by one.
+
+Typically, we see these in loops but that is not the only place this can be used.
+
+```JavaScript
+let startPoint = 0;
+console.log( startPoint ); // 0
+startPoint++;
+console.log( startPoint ); // 1
+startPoint++;
+console.log( startPoint ); // 2
+startPoint++;
+console.log( startPoint ); // 3
+```
+
+```JavaScript
+let totalLife = 100;
+console.log( totalLife ); // 100
+totalLife--;
+console.log( totalLife ); // 99
+totalLife--;
+console.log( totalLife ); // 98
+totalLife--;
+console.log( totalLife ); // 97
+
+for( let i = 0; i < 10; i++ ){
+  console.log(i);
+}
+```
+
 ### Looping 
 
 #### Definition
