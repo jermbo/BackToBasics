@@ -1423,6 +1423,53 @@ document.querySelector('[type=”text”]'); // looking for the first text input
 document.querySelector('.btn'); // looking for the first class of btn
 ```
 
+#### querySelectorAll()
+
+**querySelector()** is a method on the Document object which returns a static **NodeList** representing a list of the document's elements that match the specified selector.
+
+```HTML
+<div id='infoArea'>
+   <p>Some text about something</p>
+   <a class="btn" href="#">Click Me</a>
+   <input type=”text” />
+</div>
+```
+
+```JavaScript
+document.querySelectorAll('#infoArea'); // looking for all elements with that id. ( This is bad practice as ids should be unique, but it can be done. )
+document.querySelectorAll('p'); // looking for all the paragraphs on the page
+document.querySelectorAll('[type=”text”]'); // looking for all the text input fields on the page
+document.querySelectorAll('.btn'); // looking for all items with class of btn on the page
+```
+
+#### Caching the DOM
+
+Looking though the DOM is an expensive task. Meaning, process to execute it is high. We can mitigate a bit by **caching** the DOM. 
+
+That simply means, store it in a variable for later use.
+
+```JavaScript
+const postData = [{...},{...},{...},{...}];
+
+postData.forEach((post, i) => {
+  document.querySelector('.posts').innerHTML += `<div class="post post-${i}>
+    <h1>${post.title}</h1>
+    <div>${post.desc}</div>
+  </div>`;
+});
+```
+
+```JavaScript
+const postDisplay = document.querySelector('.post');
+const postData = [{...},{...},{...},{...}];
+
+postData.forEach((post, i) => {
+  postDisplay.innerHTML += `<div class="post post-${i}>
+    <h1>${post.title}</h1>
+    <div>${post.desc}</div>
+  </div>`;
+});
+```
 ### Events
 
 #### Definition
