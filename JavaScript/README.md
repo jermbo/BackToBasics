@@ -1470,6 +1470,28 @@ postData.forEach((post, i) => {
   </div>`;
 });
 ```
+
+#### Properties on the DOM
+
+Every element selected comes with a set of properties and methods. Each property and method can be accessed by simply invoking the property name. Most properties can be overwritten simply by assigning it to a new value. 
+
+```HTML
+<p id="userName" class="title">
+  <span>Jermbo</span>
+</p>
+```
+
+```JavaScript
+const nameDisplay = document.querySelector('#userName');
+console.log(nameDisplay.innerHTML); // <span>Jermbo</span>
+console.log(nameDisplay.innerText); // Jermbo
+console.log(nameDisplay.classList.contains('title')); // true
+nameDisplay.classList.add('special');
+nameDisplay.addEventListener('mouseover', () => console.log('hello'));
+```
+
+*Link:* checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element) documentation for a full list of properties and methods. 
+
 ### Events
 
 #### Definition
