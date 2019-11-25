@@ -1171,15 +1171,33 @@ document.body.innerHTML = output;
 
 #### For Loops
 
-#### For...in Loops
+A **for** loop repeats until a specified condition evaluates to false. 
 
-#### For...of Loops
+```JavaScript
+for( let i = 0; i < 10; i++ ) {
+  console.log(`The number is ${i}`);
+}
+```
 
-#### Increment | Decrement
+There are 5 steps that execute when a for loop runs.
 
-It's common to want to increment, or decrement, one number at a time. To increment by one you simply use **++** at the end of your variable. Conversely, you add **--** to the end of your variable to decrement by one.
+1. The `initialExpression` is executed. ( That's the `let i = 0` part. )
+2. The `condition` gets evaluated. ( That's the `i < 10` part. )
+   - If the condition is evaluated to true, it executes the block. ( The block being the stuff between the `{}`. )
+   - If the condition is evaluated to false, the loops terminates.
+3. The statement executes the block. ( The block being the stuff between the `{}`. )
+4. The `incrementExpression` is executed. ( Thats the `i++` part. )
 
-Typically, we see these in loops but that is not the only place this can be used.
+```JavaScript
+const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
+let output = '';
+
+for ( let i = 0; i < characters.length; i++ ) {
+  output += `<p>${characters[i]}</p>`;
+}
+
+document.body.innerHTML = output;
+```
 
 ```JavaScript
 let startPoint = 0;
