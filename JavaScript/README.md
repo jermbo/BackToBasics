@@ -1388,6 +1388,41 @@ if( !stillPlaying || playerScore > currentHighScore ) {
 
 #### Definition
 
+**DOM** stands for **Document Object Model**. Think of this as a representation to the markup that defines a page.
+
+JavaScript provides us with a plethora of **methods** that gives us **access** to the HTML for **manipulation**.
+
+#### Select Elements
+
+There are five ways to select an element from the DOM. We will cover two in depth, but will mention all of them incase you run into them in the wild.
+
+* .getElementById()
+* .getElementsByClassName()
+* .getElementsByTagName()
+* .querySelector()
+* .querySelectorAll()
+
+#### querySelector()
+
+**querySelector()** is a method on the Document object which returns the first **Element** that matches the specified selector. If no matches are found, `null` is returned.
+
+The specified selector is any valid css selector.
+
+```HTML
+<div id='infoArea'>
+   <p>Some text about something</p>
+   <a class="btn" href="#">Click Me</a>
+   <input type=”text” />
+</div>
+```
+
+```JavaScript
+document.querySelector('#infoArea'); // looking for one element with that id
+document.querySelector('p'); // looking for the first paragraph on the page
+document.querySelector('[type=”text”]'); // looking for the first text input field on the page
+document.querySelector('.btn'); // looking for the first class of btn
+```
+
 ### Events
 
 #### Definition
