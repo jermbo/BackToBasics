@@ -1267,6 +1267,29 @@ console.log( true === 1 ); // false
 console.log( false === 0); // false
 ```
 
+#### != vs !==
+
+**Inequality** returns true if the operands are **not equal** to each other. 
+
+To check for inequality you use the **exclamation mark and equal sign** ( != ). This compares for inequality **regardless** of type.
+
+**Strict inequality** compares just the same, though **type** is considered **first**, then inequality.
+
+```JavaScript
+const userName = 'Jermbo';
+
+console.log( 1 != 1 ); // false
+console.log( 1 != '1'); // false
+console.log( 10 != 100 ); // true
+console.log( 'Hello' != 'hello'); // true
+console.log( userName != 'Jermbo'); // false
+console.log( true != 1 ); // false
+console.log( false != 0); // false
+
+console.log( 10 !== '10'); // true
+console.log( true !== 1 ); // true
+console.log( false !== 0); // true
+```
 ### The DOM
 
 #### Definition
