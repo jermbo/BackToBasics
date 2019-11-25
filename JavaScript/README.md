@@ -1237,9 +1237,35 @@ for( let char of name ) {
 }
 ```
 
-### Conditions 
+### Comparisons and Conditions 
 
 #### Definition
+
+In any programming language we need a way to compare things to each other. 
+
+Due to the fact JavaScript is **not** a **strongly **typed**** language we have **two ways to compare** items. Either **loosely** or **strongly**.
+
+#### == vs ===
+
+**Equality** can be compared by using **double equal signs**. ( == ). The equality checks the **Left Hand Side (LHS)** as being the same value as the **Right Hand Side (RHS)**. Type is not considered. 
+
+**Strict Equality** can be compared by using **triple equal signs** ( === ). The strict equality checks the **LSH** as being the **same type** as the **RHS**, then for the **value equality**.
+
+```JavaScript
+const userName = 'Jermbo';
+
+console.log( 1 == 1 ); // true
+console.log( 1 == '1'); // true
+console.log( 10 == 100 ); // false
+console.log( 'Hello' == 'hello'); // false, case sensitivity applies here
+console.log( userName == 'Jermbo'); // true
+console.log( true == 1 ); // true
+console.log( false == 0); // true
+
+console.log( 10 === '10'); // false
+console.log( true === 1 ); // false
+console.log( false === 0); // false
+```
 
 ### The DOM
 
