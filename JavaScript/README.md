@@ -1825,10 +1825,37 @@ const nums = multiply(2, 1, 2, 3, 4);
 console.log(nums); // [2, 4, 6, 8]
 ```
 
-### Promises
+### Promise
 
-#### Definition
+The **Promise** object represents the eventual completion, or failure, of an asynchronous operation and its resulting value.
 
-### Async + Await
+```JavaScript
+function makeCoffee(type = 'coffee', additions = []) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Your ${type} is ready with ${additions.join(' ')}. Enjoy!`)
+    }, 1000);
+  });
+}
 
-#### Definition
+makeCoffee('coffee', ['cream', 'sugar'])
+  .then(coffee => {
+    console.log(coffee);
+    return makeCoffee('latte', ['skim milk', 'stevia'])
+  })
+  .then(coffee => {
+    console.log(coffee);
+    return makeCoffee('cold brew', ['hazelnut creamer', 'stevia', 'instant espresso shot'])
+  })
+  .then(coffee => {
+    console.log(coffee);
+  });
+```
+
+```JavaScript
+fetch('https://sampleapis.com/futurama/characters')
+  .then(resp => resp.json())
+  .then(data => {
+    console.log(data); // (15) [{...},{...},{...},...]
+  });
+```
