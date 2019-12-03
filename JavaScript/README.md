@@ -1665,13 +1665,29 @@ doSomething( startObj );
 
 #### Definition
 
+**Spread syntax** allows an iterable to be expanded in places where zero or more arguments are expected.
+
+```JavaScript
+const total = (a, b, c) => a + b + c;
+const numbers = [2, 4, 6];
+console.log( total(...numbers) ); // 12
+console.log( total(numbers) ); // NaN
+```
+
 ### Rest
 
 #### Definition
 
-### Mutation vs. immutable
+**Rest Parameters** allows you to represent an indefinite number of arguments as an array. You can specify any number of parameters and follow the rest at the end of the list. This will always be at the end of the parameter list and will not include the items defined before it.
 
-#### Definition
+```JavaScript
+function multiply(multiplier, ...theNums) {
+  return theNums.map(num => multiplier * num);
+}
+
+const nums = multiply(2, 1, 2, 3, 4);
+console.log(nums); // [2, 4, 6, 8]
+```
 
 ### Promises
 
