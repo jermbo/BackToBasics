@@ -1624,6 +1624,43 @@ JavaScript provides two methods to help.
 
 #### Definition
 
+**Destructuring** provides a more succinct way to unpack values from arrays, or properties from objects, into distinct variables. These can be used as stand alone variables, or a part of function parameters.
+
+```JavaScript
+console.clear();
+const startArr = ['Fry', 'Bender', 'Leela', 'Professor'];
+const [person1, person2] = startArr;
+console.log( person1 ); // Fry
+console.log( person2 ); // Bender
+
+function doSomething ( [ p1, p2, p3 ] ){
+    console.log( p1 ); // Fry
+    console.log( p2 ); // Bender
+    console.log( p3 ); // Leela
+    console.log( p4 ); // Reference Error: p4 is not defined
+}
+doSomething(startArr);
+```
+
+```JavaScript
+const startObj = {
+    name: 'Fry',
+    occupation: 'Delivery Boy',
+    age: 1025
+};
+const {name, occupation} = startObj;
+console.log( name ); // Fry
+console.log( occupation ); // Delivery Boy
+
+function doSomething( { name, occupation, age } ) {
+  console.log( name ); // Fry
+  console.log( occupation ); // Delivery Boy
+  console.log( age ); // 1025
+}
+
+doSomething( startObj );
+```
+
 ### Spread
 
 #### Definition
