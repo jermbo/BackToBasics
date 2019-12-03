@@ -1423,6 +1423,12 @@ console.log( true < 1 ); // false
 console.log( false < 0); // false
 ```
 
+#### >= vs <=
+
+**Greater than** or **equal to** ( >= ) operator returns **true** if the LHS is **greater than** or **equal to** the RHS.
+
+Conversely, **less than** or **equal to** ( <= ) will return **true** if the LHS is **less than** or **equal to** the RHS.
+
 ```JavaScript
 const userName = 'Jermbo';
 
