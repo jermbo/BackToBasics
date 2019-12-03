@@ -7,27 +7,106 @@
 - What to expect?
 - Language Fundamentals
   - Variables
+    - Variable Types
+    - Naming Rules
+    - Style Rules
+    - Examples
+    - Var Exercises
   - Functions
+    - Anonymous
+    - Declaration
+    - Expression
+    - Arrow
+    - Paramters / Arguments
+    - Callbacks
+      - CB Example Alert
+      - CB Example Anonymous
+      - CB Example Declaration
+    - Default Parameters
+    - Function Exercises
   - Scope
+    - Global
+    - Local
+    - Function
+    - Block
+    - Comparision Table
   - Objects
+    - Properties and Methods
+    - Dot Notation
+    - Bracket Notation
+    - Bracket Notation Use Case 1
+    - Bracket Notation Use Case 2
   - Strings
+    - Concatenation
+    - Template Literals
+    - Length Property
+    - toUpperCase
+    - toLowerCase
+    - trim
+    - Chainable
+    - split
   - Numbers
+    - parseInt
+    - parseFloat
+    - toFixed
   - Coercion
   - Arrays
+    - Array Methods
     - Accessors
+      - includes
+      - indexOf
+      - join
+      - slice
     - Iterators
+      - forEach
+      - map
+      - filter
     - Mutators
+      - pop
+      - push
+      - shift
+      - unshift
+      - splice
   - Looping
+    - While Loops
+    - For Loops
+    - For ... in loops
+    - For ... of loops
   - Conditions
+    - == vs ===
+    - != vs !==
+    - > vs <
+    - > = vs <=
+    - Logic Operators
+      - And
+      - Or
   - The DOM
+    - Select Elements
+      - querySelector
+      - querySelectorAll
+    - Caching the DOM
+    - Properties on the DOM
   - Events
+    - Types of Events
+      - Mouse Events
+      - Touch Events
+      - Keyboard Events
+      - Form Events
+      - Window Events
+    - Add Event Listener
+    - Remove Event Listener
 - Advanced Topics
   - JSON
+    - Rules
+    - Demystifying
   - Destructuring
+    -
   - Spread
+    -
   - Rest
+    -
   - Promises
-  - Async + Await
+    -
 
 ## Intro
 
