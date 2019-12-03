@@ -621,6 +621,8 @@ function futurama() {
 
 For example, a **vehicle** is an **object**. All vehicles have the same **properties** and **methods**, but the values **differ between different vehicle**.
 
+Another example would be a **person**. A person has properties such as; **firstName**, **lastName**, **email**. A person also has methods like; **eat**, **rest**, **speak**.
+
 ```JavaScript
 const myCar = {
   model: 'I-280',
@@ -639,6 +641,37 @@ const myCar = {
     // add fuel of type to tank.
   }
 }
+```
+
+```JavaScript
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  health: 50,
+  energy: 47,
+  fullName: function() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  sleep: function() {
+    this.health = 100;
+    return this.health;
+  },
+  eat: function(type) {
+    if (type == "fruit") {
+      this.energy += 25;
+    } else {
+      this.energy += 10;
+    }
+
+    return this.energy;
+  }
+};
+
+console.log(person.fullName()); // John Doe
+console.log(person.eat('pizza')); // 57
+console.log(person.eat('fruit')); // 82
+console.log(person.health); // 50
+console.log(person.sleep()); // 100
 ```
 
 #### Properties and Methods
@@ -680,6 +713,7 @@ myCar[method](); // "going faster"
 There are two use cases that would require you to use the bracket notation over the dot notation. The first, most straight forward reason, is the object key has a space or character not allowed in a variable name.
 
 ```JavaScript
+// Completely acceptable keys in an object
 const special = {
   'Key One': 'The First Value',
   'Key-ID': 1234,
