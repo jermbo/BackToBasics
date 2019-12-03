@@ -22,10 +22,10 @@
   - The DOM
   - Events
 - Advanced Topics
+  - JSON
   - Destructuring
   - Spread
   - Rest
-  - Mutable vs. immutable
   - Promises
   - Async + Await
 
@@ -1564,6 +1564,61 @@ function handelItemClick(e) {
 ```
 
 ## Advanced Topics
+
+### JSON
+
+#### Definition
+
+JSON stands for **JavaScript Object Notation**.
+
+JSON is a lightweight data-interchange format that a lof of api's use to communicate. It's easy to read and write and is used practically anywhere.
+
+JSON is a subset of JavaScript and there are stricter rules on its syntax.
+
+#### Rules
+
+- Uses key/value pairs
+  - { "key": "value" }
+- Double quotes around the key.
+- Data types include
+  - String ( using double quotes )
+  - Number
+  - Boolean
+  - Array
+  - Object
+- File extension **.json**
+- MIME type is **application/json**
+- Separate everything with commas
+  - Last item cannot contain an ending comma.
+
+```JavaScript
+{
+  "meetups": [
+    {
+      "name": "Palm Beach JavaScript",
+      "organizers": ["Jermbo", "Damian"],
+      "members": 608,
+      "isActive": true,
+      "date": "Last Tuesday of every month"
+    },
+    {
+      "name": "BocaJS",
+      "organizers": ["Damian"],
+      "members": 826,
+      "isActive": true,
+      "date": "First Tuesday of every month"
+    }
+  ]
+}
+```
+
+Since JSON is a subset of JavaScript, if you want to use it you might have to convert it from JSON to an object that JavaScript can utilize.
+
+On the flip side, if you want to save an object to a JSON api, you need to convert it to a JSON object.
+
+JavaScript provides two methods to help.
+
+`JSON.parse` and `JSON.stringify()`
 
 ### Destructuring
 
