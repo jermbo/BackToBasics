@@ -220,10 +220,6 @@ const square = (num) => num * 2;
 const square = num => num * 2;
 ```
 
-##### Rules
-
-The
-
 #### Invoke
 
 In order to get a block of code to run, the function needs to be **invoked**. Other synonyms include; **call**, **trigger**, **run**.
