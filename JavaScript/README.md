@@ -1170,69 +1170,7 @@ console.log(characters.splice(3)); // ["Professor", "Hermies"]
 console.log(characters); // ["Fry", "Leela", "Bender"]
 ```
 
-### Arithmetic
-
-#### Definition
-
-**Arithmetic** operators takes numeric values and performs the desired mathematical operation. The standard arithmetic operators are;
-
-- Addition ( + )
-- Subtraction ( - )
-- Multiplication ( \* )
-- Division ( / )
-
-_Note:_ You can group equations together to execute before other specified steps, as the rules of P.E.M.D.A.S apply. Parentheses first, then multiplication, then division, then addition, then subtraction.
-
-```JavaScript
-console.log( 1 + 2 ); // 3
-console.log( 100 - 45 ); // 55
-console.log( 20 * 3 ); // 60
-console.log( 16 / 2 + 6 ); // 14
-console.log( 16 / ( 2 + 6 ) ); // 2
-console.log( ( 100 - 75 ) + ( 25 * 2 ) ); // 75
-const min = 6;
-const max = 55;
-console.log( min * max ); // 330
-console.log( min - max ); // -49
-console.log( min + max ); // 61
-console.log( min / max ); // 0.10909090909090909
-```
-
-#### Increment | Decrement
-
-It's common to want to increment, or decrement, one number at a time. To increment by one you simply use **++** at the end of your variable. Conversely, you add **--** to the end of your variable to decrement by one.
-
-Typically, we see these in loops but that is not the only place this can be used.
-
-```JavaScript
-let startPoint = 0;
-console.log( startPoint ); // 0
-startPoint++;
-console.log( startPoint ); // 1
-startPoint++;
-console.log( startPoint ); // 2
-startPoint++;
-console.log( startPoint ); // 3
-```
-
-```JavaScript
-let totalLife = 100;
-console.log( totalLife ); // 100
-totalLife--;
-console.log( totalLife ); // 99
-totalLife--;
-console.log( totalLife ); // 98
-totalLife--;
-console.log( totalLife ); // 97
-
-for( let i = 0; i < 10; i++ ){
-  console.log(i);
-}
-```
-
 ### Looping
-
-#### Definition
 
 Loops are a way to do something repeatedly. Typically these are used to access each item in an array, but they have other use cases as well.
 
