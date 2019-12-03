@@ -114,6 +114,10 @@ let score = 4000;
 const PlacesToVisit = ['Florida', 'Ohio', 'California'];
 const currentYear = new Date().getFullYear();
 
+let userName = 'Bender'; // Error: variable already exists
+currentYear = new Date(); // Error: cannot reassign constants
+PlacesToVisit.push('New York'); // ['Florida', 'Ohio', 'California', 'New York']
+
 // Bad Examples
 let cliu; // Current Logged In User
 const positionX = 'London'; // What's the connection?
@@ -444,15 +448,19 @@ In file `02-functions/start/functions.js`, you will see a series of functions th
 - Function
 - Block
 
+![](images/scope-visual.jpg)
+
 #### Global
 
 JavaScript has one global scope, **window**. Anything that is not written inside a local, function, or block scope can be accessed and altered by any scope in your code.
 
 ```JavaScript
+// Global Scope
 const character = 'Bender';
 console.log(character); // "Bender"
 
 function getCharacter() {
+  // Local Scope 1
   console.log(character); // "Bender"
 }
 
@@ -1536,6 +1544,67 @@ _Link:_ checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Elem
 JavaScript is an **event based language**. Meaning, nothing happens until something is triggered.
 
 When you are browsing the web, your browser registers different types of events. It's the browsers way of saying, "Hey! This just happened. Do something if you want.", and your script can respond to that.
+
+The browser has a huge list of events that you can listen for. Take a look at [MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list.
+
+#### Types of Events
+
+There are a handful of types of events to listen for.
+
+- Mouse Events
+- Touch Events
+- Keyboard Events
+- Form Events
+- Window Events
+
+##### Mouse Events
+
+The **Mouse Event** interface represents events that occur due to the user interacting with a pointing device. Some events often used;
+
+- mousedown
+- mouseup
+- click
+- dblclick
+- mouseover
+- mouseout
+- mousemove
+- mousewheel
+
+##### Touch Events
+
+The **Touch Event** interface represents an event sent when the state of contacts with a touch-sensitive surface changes. This surface and be a touch screen or a track pad. Some events often used;
+
+- touchstart
+- touchend
+- touchmove
+- touchcancel
+
+##### Keyboard Events
+
+The **Keyboard Event** interface describes a user interaction with a keyboard. Each event describes a key and provides an event object with useful information to be utilized. Some events often used;
+
+- keydown
+- keypress
+- keyup
+
+##### Form Events
+
+The **Form Event** interface describes a user interaction with a form element. Some events often used;
+
+- focus
+- blur
+- change
+- submit
+
+##### Window Events
+
+The **Window Event** interface describes a user interaction with a window of a browser. Some evens often used;
+
+- scroll
+- resize
+- haschange
+- load
+- unload
 
 #### Add Event Listener
 
