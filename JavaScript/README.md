@@ -1762,6 +1762,23 @@ JavaScript provides two methods to help.
 
 `JSON.parse` and `JSON.stringify()`
 
+#### Demystifying
+
+Often times, when dealing with data sets, they idea of looking at a complicated set of dots and square brackets can make things looks more scary than they really are. One approach I take is to look at the individual sections, determine what it is, then make a decision on what to do next.
+
+For example, lets figure out what the second ingredient of the third beer in the [BeerApi](https://punkapi.com/documentation/v2).
+
+Lets look at this data from the api, [https://api.punkapi.com/v2/beers?per_page=10](https://api.punkapi.com/v2/beers?per_page=10)
+
+```JavaScript
+fetch('https://api.punkapi.com/v2/beers?per_page=10')
+  .then(resp => resp.json())
+  .then(data => {
+    console.log(data); // (10) [{...},{...},{...},...]
+    console.log(data[2].ingredients['malt'][1].name); // Wheat Malt
+  })
+```
+
 ### Destructuring
 
 **Destructuring** provides a more succinct way to unpack values from arrays, or properties from objects, into distinct variables. These can be used as stand alone variables, or a part of function parameters.
