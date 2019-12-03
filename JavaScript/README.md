@@ -508,7 +508,46 @@ function logStuff ('Hello Jermbo') {
 greetUser(logStuff, 'Jermbo');
 ```
 
-#### Exercise Time
+#### Default Parameters
+
+Often times, the function parameters do not require them to be passed during invocation, but the argument still needs a value. Parameters can be set to a default value and used in the absence of an argument being passed.
+
+```JavaScript
+function makeCoffee( type, additions ) {
+  return `Your ${type} with ${additions.join(' ')} is ready. Enjoy!`;
+}
+console.log( makeCoffee('coffee', [] ));
+console.log( makeCoffee('latte', ['cream', 'sugar'] ));
+```
+
+```JavaScript
+function makeCoffee( type = 'coffee', additions = [] ) {
+  return `Your ${type} with ${additions.join(' ')} is ready. Enjoy!`;
+}
+console.log( makeCoffee() );
+// Your coffee with is ready. Enjoy!
+console.log( makeCoffee('latte', ['cream'] ) );
+// Your latte with cream is ready. Enjoy!
+console.log( makeCoffee(undefined, ['cream'] ) );
+// Your coffee with cream is ready. Enjoy!
+console.log( makeCoffee('cold brew') );
+// Your cold brew with is ready. Enjoy!
+```
+
+```JavaScript
+function makeCoffee( type = 'coffee', additions = [], cb = display ) {
+  cb(`Your ${type} with ${additions.join(' ')} is ready. Enjoy!`);
+}
+function display(coffee) {
+  console.log(coffee);
+}
+makeCoffee('cold brew', ['cream']);
+makeCoffee(undefined, undefined, (coffee) => {
+  console.log('Anonymous CB', coffee)
+});
+```
+
+#### Function Exercise
 
 In file `02-functions/start/functions.js`, you will see a series of functions that need names and parameters. Remember, function names follow very similar rules to variables.
 
