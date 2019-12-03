@@ -1632,6 +1632,30 @@ function handelItemClick(e) {
 }
 ```
 
+#### Remove Event Listener
+
+**.removeEventListener()** method removes an event handler that has been registered with the `.addEventListener()` method.
+
+_Note:_ In order to remove an event handler, the function specified with `.addEventListener()` **must be an external, name function**. Trying to remove an anonymous function will not work.
+
+```JavaScript
+const click1 = document.querySelector(".click1");
+const click2 = document.querySelector(".click2");
+
+click1.addEventListener("click", function(e) {
+  console.log("anonymous func");
+});
+
+click2.addEventListener("click", externalFunc);
+
+function externalFunc(e) {
+  console.log("external func");
+}
+
+click1.removeEventListener("click", () => {}); // Still active
+click2.removeEventListener("click", externalFunc); // Removed click event
+```
+
 ## Advanced Topics
 
 ### JSON
