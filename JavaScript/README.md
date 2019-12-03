@@ -220,6 +220,10 @@ const square = (num) => num * 2;
 const square = num => num * 2;
 ```
 
+##### Rules
+
+The
+
 #### Invoke
 
 In order to get a block of code to run, the function needs to be **invoked**. Other synonyms include; **call**, **trigger**, **run**.
@@ -564,13 +568,13 @@ const myCar = {
 
 #### Properties and Methods
 
-**Properties** are like a variable, they store a value. Your care might have a different make, so your cars ***make* property** will reflect accordingly.
+**Properties** are like a variable, they store a value. Your care might have a different make, so your cars **_make_ property** will reflect accordingly.
 
-**Methods** are like functions, they do something. Again, since  your car is different, the type and amount of fuel you require will be different.
+**Methods** are like functions, they do something. Again, since your car is different, the type and amount of fuel you require will be different.
 
-*Note* **Properties** are **variables**, just associated with an **object**. 
+_Note_ **Properties** are **variables**, just associated with an **object**.
 
-*Note* **Methods** are **functions**, just associated with an **object**.
+_Note_ **Methods** are **functions**, just associated with an **object**.
 
 #### Dot Notation
 
@@ -598,7 +602,7 @@ myCar[method](); // "going faster"
 
 #### Bracket Notation Use Case 1
 
-There are two use cases that would require you to use the bracket notation over the dot notation. The first, most straight forward reason, is the object key has a space or character not allowed in  a variable name. 
+There are two use cases that would require you to use the bracket notation over the dot notation. The first, most straight forward reason, is the object key has a space or character not allowed in a variable name.
 
 ```JavaScript
 const special = {
@@ -623,7 +627,7 @@ console.log(special['the.func']); // "the func"
 
 #### Bracket Notation Use Case 2
 
-The second use case is accessing an item based on user input. 
+The second use case is accessing an item based on user input.
 Let's say we have an interface that allows the user to change the values of each property on their car. We have a **keyInput** select that maps to each property in the object. When the user selects it, it will reflect the property chosen and allow the user to change the value.
 
 ```JavaScript
@@ -666,7 +670,7 @@ console.log( sport + type ); // "Blitzball"
 
 ```JavaScript
 const num1 = 4;
-const num2 = 2; 
+const num2 = 2;
 console.log(`${num1} + ${num2} = ${num1 + num2}`); // "4 + 2 = 6"
 ```
 
@@ -700,7 +704,7 @@ Pretty much everything can be thought of as an object in JavaScript. **String** 
 
 We can tell how many characters are in a string by accessing its **length** property.
 
-*Note:* spaces and other hidden characters are valid characters and will contribute to the length.
+_Note:_ spaces and other hidden characters are valid characters and will contribute to the length.
 
 ```JavaScript
 console.log( " Hello world!   ".length ); // 16
@@ -757,7 +761,7 @@ console.log( greeting.trim().toLowerCase() ); // "hello human"
 
 #### split
 
-**.split()** turns the string into an **array of string** by separating the string into strings. 
+**.split()** turns the string into an **array of string** by separating the string into strings.
 
 How it's broken up is determined by the **separator string** provided as the **argument**.
 
@@ -804,7 +808,7 @@ const test1 = '123abc123';
 const test2 = 'abc123';
 
 console.log( parseInt(age) ); // 123
-console.log( parseInt(height) ); // 5 
+console.log( parseInt(height) ); // 5
 console.log( parseInt(pi) ); // 3
 console.log( parseInt(test1) ); // 123
 console.log( parseInt(test2) ); // NaN
@@ -858,7 +862,6 @@ This is a controversial topic in JavaScript. Is this a flaw in the language? Is 
 
 My stance is, it's a useful tool that should be embraced. It's one of my favorite things about the language, until it isn't.
 
-
 ```JavaScript
 console.log( 10 + "10" ); // "1010"
 console.log( "5" + 15 ); // "515"
@@ -885,7 +888,7 @@ Consider the following code.
 
 ```JavaScript
 const name1 = 'Fry';
-const name2 = 'Leela'; 
+const name2 = 'Leela';
 const name3 = 'Bender';
 const name4 = 'Professor';
 const name5 = 'Hermies';
@@ -903,7 +906,7 @@ Let's reconsider the previous example and make it an array.
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
 ```
 
-You can access any item in the array by pointing it via its **index number**. 
+You can access any item in the array by pointing it via its **index number**.
 
 #### Note
 
@@ -965,7 +968,7 @@ console.log( characters.join('--') ); // "Fry--Leela--Bender--Professor--Hermies
 
 ##### Slice
 
-This method returns a **shallow portion** of an array into a **new array**, selected from a **starting index** to an **ending index**, ending index not included. 
+This method returns a **shallow portion** of an array into a **new array**, selected from a **starting index** to an **ending index**, ending index not included.
 
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
@@ -981,7 +984,7 @@ console.log( characters.slice(0, 3) ); // ["Fry", "Leela", "Bender"]****
 
 There are a dozen or so methods one has access to, but we are going to explore ones that I use most frequently in my day to day work.
 
-*Note:* Each callback will be passed these three arguments, regardless if they are used or not. **CurrentValue**, **index**, **Original Array**.
+_Note:_ Each callback will be passed these three arguments, regardless if they are used or not. **CurrentValue**, **index**, **Original Array**.
 
 ##### ForEach
 
@@ -1091,7 +1094,7 @@ console.log( characters ); // ["Zapp", "Fry", "Leela", "Bender", "Professor", "H
 
 ##### Splice
 
-**.splice()** changes the contents of an array by removing existing items and or adding new ones. 
+**.splice()** changes the contents of an array by removing existing items and or adding new ones.
 
 Splice at bare minimum accepts one argument, which represents the starting index. If the second argument is not provided, it will remove the rest in the array after that starting index.
 
@@ -1114,10 +1117,10 @@ console.log(characters); // ["Fry", "Leela", "Bender"]
 
 - Addition ( + )
 - Subtraction ( - )
-- Multiplication ( * )
+- Multiplication ( \* )
 - Division ( / )
 
-*Note:* You can group equations together to execute before other specified steps, as the rules of P.E.M.D.A.S apply. Parentheses first, then multiplication, then division, then addition, then subtraction.
+_Note:_ You can group equations together to execute before other specified steps, as the rules of P.E.M.D.A.S apply. Parentheses first, then multiplication, then division, then addition, then subtraction.
 
 ```JavaScript
 console.log( 1 + 2 ); // 3
@@ -1166,11 +1169,11 @@ for( let i = 0; i < 10; i++ ){
 }
 ```
 
-### Looping 
+### Looping
 
 #### Definition
 
-Loops are a way to do something repeatedly. Typically these are used to access each item in an array, but they have other use cases as well. 
+Loops are a way to do something repeatedly. Typically these are used to access each item in an array, but they have other use cases as well.
 
 #### While Loops
 
@@ -1192,7 +1195,7 @@ while( i < 10 ) {
 }
 ```
 
-*Note:* While loops are easy to create **infinite** loops. Use with caution and always remember to create a flag that will evaluate to false, eventually.
+_Note:_ While loops are easy to create **infinite** loops. Use with caution and always remember to create a flag that will evaluate to false, eventually.
 
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
@@ -1209,7 +1212,7 @@ document.body.innerHTML = output;
 
 #### For Loops
 
-A **for** loop repeats until a specified condition evaluates to false. 
+A **for** loop repeats until a specified condition evaluates to false.
 
 ```JavaScript
 for( let i = 0; i < 10; i++ ) {
@@ -1257,10 +1260,10 @@ for (let key in oldCar) {
 
 A **for...of** statement iterates over the values in an **iterable**.
 
-*Note*: **Iterable** is an object that can be looped over. Arrays, Strings, Maps, Sets, and NodeList are the most used. 
+_Note_: **Iterable** is an object that can be looped over. Arrays, Strings, Maps, Sets, and NodeList are the most used.
 
 ```JavaScript
-const paragraphs = document.querySelectorAll('p'); // This stores a NodeList, which is an Iterable Object. 
+const paragraphs = document.querySelectorAll('p'); // This stores a NodeList, which is an Iterable Object.
 
 for( let p of paragraphs ) {
   console.log(p.innerText);
@@ -1275,17 +1278,17 @@ for( let char of name ) {
 }
 ```
 
-### Comparisons and Conditions 
+### Comparisons and Conditions
 
 #### Definition
 
-In any programming language we need a way to compare things to each other. 
+In any programming language we need a way to compare things to each other.
 
-Due to the fact JavaScript is **not** a **strongly **typed**** language we have **two ways to compare** items. Either **loosely** or **strongly**.
+Due to the fact JavaScript is **not** a **strongly **typed\***\* language we have **two ways to compare** items. Either **loosely** or **strongly\*\*.
 
 #### == vs ===
 
-**Equality** can be compared by using **double equal signs**. ( == ). The equality checks the **Left Hand Side (LHS)** as being the same value as the **Right Hand Side (RHS)**. Type is not considered. 
+**Equality** can be compared by using **double equal signs**. ( == ). The equality checks the **Left Hand Side (LHS)** as being the same value as the **Right Hand Side (RHS)**. Type is not considered.
 
 **Strict Equality** can be compared by using **triple equal signs** ( === ). The strict equality checks the **LSH** as being the **same type** as the **RHS**, then for the **value equality**.
 
@@ -1307,7 +1310,7 @@ console.log( false === 0); // false
 
 #### != vs !==
 
-**Inequality** returns true if the operands are **not equal** to each other. 
+**Inequality** returns true if the operands are **not equal** to each other.
 
 To check for inequality you use the **exclamation mark and equal sign** ( != ). This compares for inequality **regardless** of type.
 
@@ -1331,7 +1334,7 @@ console.log( false !== 0); // true
 
 #### > vs <
 
-Each **relational operator** will call the `valueOf()` method on **each operand** before the comparison is made. 
+Each **relational operator** will call the `valueOf()` method on **each operand** before the comparison is made.
 
 **Greater than** ( > ) operator returns **true** if the LHS is **greater than** the RHS.
 
@@ -1393,7 +1396,7 @@ We have two operators at our disposal, **And** ( && ). **Or** ( || ).
 
 ##### And Operator
 
-**And** operator validates to true if all conditions evaluate to true. 
+**And** operator validates to true if all conditions evaluate to true.
 
 For example, only display a message that the account balance is low when; user is logged in **and** balance is less than one hundred dollars.
 
@@ -1408,7 +1411,7 @@ if( isLogged && balance < 100 ){
 
 ##### Or Operator
 
-**Or** operator validates to true if one condition evaluate to true. 
+**Or** operator validates to true if one condition evaluate to true.
 
 For example, display a special user score animation if; the user sets a new high school **or** game is over.
 
@@ -1434,11 +1437,11 @@ JavaScript provides us with a plethora of **methods** that gives us **access** t
 
 There are five ways to select an element from the DOM. We will cover two in depth, but will mention all of them incase you run into them in the wild.
 
-* .getElementById()
-* .getElementsByClassName()
-* .getElementsByTagName()
-* .querySelector()
-* .querySelectorAll()
+- .getElementById()
+- .getElementsByClassName()
+- .getElementsByTagName()
+- .querySelector()
+- .querySelectorAll()
 
 #### querySelector()
 
@@ -1482,7 +1485,7 @@ document.querySelectorAll('.btn'); // looking for all items with class of btn on
 
 #### Caching the DOM
 
-Looking though the DOM is an expensive task. Meaning, process to execute it is high. We can mitigate a bit by **caching** the DOM. 
+Looking though the DOM is an expensive task. Meaning, process to execute it is high. We can mitigate a bit by **caching** the DOM.
 
 That simply means, store it in a variable for later use.
 
@@ -1511,7 +1514,7 @@ postData.forEach((post, i) => {
 
 #### Properties on the DOM
 
-Every element selected comes with a set of properties and methods. Each property and method can be accessed by simply invoking the property name. Most properties can be overwritten simply by assigning it to a new value. 
+Every element selected comes with a set of properties and methods. Each property and method can be accessed by simply invoking the property name. Most properties can be overwritten simply by assigning it to a new value.
 
 ```HTML
 <p id="userName" class="title">
@@ -1528,7 +1531,7 @@ nameDisplay.classList.add('special');
 nameDisplay.addEventListener('mouseover', () => console.log('hello'));
 ```
 
-*Link:* checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element) documentation for a full list of properties and methods. 
+_Link:_ checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element) documentation for a full list of properties and methods.
 
 ### Events
 
@@ -1536,7 +1539,7 @@ nameDisplay.addEventListener('mouseover', () => console.log('hello'));
 
 JavaScript is an **event based language**. Meaning, nothing happens until something is triggered.
 
-When you are browsing the web, your browser registers different types of events. It's the browsers way of saying, "Hey! This just happened. Do something if you want.", and your script can respond to that. 
+When you are browsing the web, your browser registers different types of events. It's the browsers way of saying, "Hey! This just happened. Do something if you want.", and your script can respond to that.
 
 #### Add Event Listener
 
