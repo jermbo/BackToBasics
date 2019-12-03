@@ -142,8 +142,6 @@ In this portion we will break down some of the fundamentals of the language. One
 
 ### Variables
 
-#### Definition
-
 A **variable** is a named location in **memory** where **data can be stored**.
 
 It's a **symbolic** name given to a **known**, or **unknown**, quantity that permits the **name to be used independently from the information it holds**.
@@ -203,13 +201,11 @@ const positionX = 'London'; // What's the connection?
 const uFavColor = 'Bananas'; // Weird. `u` as in User or UI?
 ```
 
-#### Exercise Time
+#### Var Exercises
 
 In file `01-vars/start/vars.js`, you will see a series of variables that need names. Change the `var` key word to an appropriate `let` or `const` and create meaningful names.
 
 ### Functions
-
-#### Definition
 
 Generally speaking, a **function** is a "subprogram" that can be **called** by code external to the function.
 
@@ -392,7 +388,7 @@ All **callbacks** are **functions**. But not all **functions** are **callbacks**
 
 Only when a **function** is passed as an **argument** is when it is known as a **callback**.
 
-##### Alert
+##### CB Example Alert
 
 ```JavaScript
 function greetUser (cb, userName) {
@@ -418,7 +414,7 @@ function greetUser (alert, 'Jermbo') {
 greetUser (alert, 'Jermbo');
 ```
 
-##### Anonymous Function
+##### CB Example Anonymous
 
 ```JavaScript
 function greetUser (cb, userName) {
@@ -470,7 +466,7 @@ greetUser (function ('Hello Jermbo') {
 }, 'Jermbo');
 ```
 
-##### Function Declaration
+##### CB Example Declaration
 
 ```JavaScript
 function greetUser (cb, userName) {
@@ -517,8 +513,6 @@ greetUser(logStuff, 'Jermbo');
 In file `02-functions/start/functions.js`, you will see a series of functions that need names and parameters. Remember, function names follow very similar rules to variables.
 
 ### Scope
-
-#### Definition
 
 **Scope** determines the visibility or accessibility of a variable or function of your code. There are four scopes in JavaScript.
 
@@ -623,8 +617,6 @@ function futurama() {
 
 ### Objects
 
-#### Definition
-
 **Objects** are a set of **key:value** pairs. You can associate objects with real world items.
 
 For example, a **vehicle** is an **object**. All vehicles have the same **properties** and **methods**, but the values **differ between different vehicle**.
@@ -722,8 +714,6 @@ myCar[userKey] = newValue;
 
 ### Strings
 
-#### Definition
-
 A **string** is any set of characters **between quotes**, either single or quotes.
 
 You can use either at any time, just be aware **what you start with you must end with**.
@@ -779,9 +769,7 @@ const postsHTML = posts.map((post, index) => {
 }).join('');
 ```
 
-#### NOTE
-
-Pretty much everything can be thought of as an object in JavaScript. **String** is no exception, as this has a set of **properties** and **methods** at your disposal.
+_Note_ Pretty much everything can be thought of as an object in JavaScript. **String** is no exception, as this has a set of **properties** and **methods** at your disposal.
 
 #### Length Property
 
@@ -861,8 +849,6 @@ console.log( secretCode.split(':') ); // ["IMG", "abcdefg", "101010D", "!@#$%^&*
 
 ### Numbers
 
-#### Definition
-
 Currently, JavaScript has only **one type** of number. **Numbers** can be written **with** or **without** decimals and can be either **positive** or **negative**.
 
 ```JavaScript
@@ -877,7 +863,7 @@ console.log(123e5); // 12300000
 console.log(123e-5); // 0.00123
 ```
 
-#### ParseInt
+#### parseInt
 
 **.parseInt()** takes a string argument and returns an integer.
 
@@ -897,7 +883,7 @@ console.log( parseInt(test1) ); // 123
 console.log( parseInt(test2) ); // NaN
 ```
 
-#### ParseFloat
+#### parseFloat
 
 **.parseFloat()** takes a string argument and returns a decimal integer.
 
@@ -917,11 +903,9 @@ console.log( parseInt(test1) ); // 123.456
 console.log( parseInt(test2) ); // NaN
 ```
 
-#### Note
+_Note_ When pulling **anything** from an input field, it will be a **string**. Use either method when dealing with numerical user input.
 
-When pulling **anything** from an input field, it will be a **string**. Use either method when dealing with numerical user input.
-
-#### ToFixed
+#### toFixed
 
 **.toFixed()** formats a number to a desired decimal length. This method requires the number of decimals places you want as its only argument.
 
@@ -932,12 +916,10 @@ const numTwo = 7;
 
 console.log( price.toFixed(2) ); // "23.00"
 console.log( numOne / numTwo ); // 0.5714285714285714
-console.log( (numOne/numTwo).toFixed(4) ); // "0.5714"
+console.log( (numOne / numTwo).toFixed(4) ); // "0.5714"
 ```
 
 ### Coercion
-
-#### Definition
 
 **Coercion** is a way to change an entity from one **datatype** to **another**.
 
@@ -965,8 +947,6 @@ As JavaScript developers we run into this all the time. When we get to the logic
 
 ### Arrays
 
-#### Definition
-
 Consider the following code.
 
 ```JavaScript
@@ -991,9 +971,7 @@ const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
 
 You can access any item in the array by pointing it via its **index number**.
 
-#### Note
-
-Array indexing starts a **zero**. The **first index** in the array reflects the **second item**.
+_Note_ Array indexing starts a **zero**. The **first index** in the array reflects the **second item**.
 
 #### Array Methods
 
@@ -1011,7 +989,7 @@ These sets of methods do not modify the original array, instead they return some
 
 There are a dozen or so methods one has access to, but we are going to explore the ones I tend to use most frequently in day to day work.
 
-##### Includes
+##### includes
 
 **.includes()** determines wether an array **includes the provided element**, returning **true** or **false** where appropriate.
 
@@ -1024,7 +1002,7 @@ console.log( characters.includes('Professor') ); // true
 console.log( characters.includes('Zapp') ); // false
 ```
 
-##### IndexOf
+##### indexOf
 
 **.indexOf()** returns the **first index** at which the provided element can be found in the array. If nothing is found, a **-1** will be returned.
 
@@ -1363,11 +1341,9 @@ for( let char of name ) {
 
 ### Comparisons and Conditions
 
-#### Definition
-
 In any programming language we need a way to compare things to each other.
 
-Due to the fact JavaScript is **not** a **strongly **typed\***\* language we have **two ways to compare** items. Either **loosely** or **strongly\*\*.
+Due to the fact JavaScript is **not** a **strongly typed** language we have **two ways to compare** items. Either **loosely** or **strongly**.
 
 #### == vs ===
 
@@ -1510,8 +1486,6 @@ if( !stillPlaying || playerScore > currentHighScore ) {
 
 ### The DOM
 
-#### Definition
-
 **DOM** stands for **Document Object Model**. Think of this as a representation to the markup that defines a page.
 
 JavaScript provides us with a plethora of **methods** that gives us **access** to the HTML for **manipulation**.
@@ -1617,8 +1591,6 @@ nameDisplay.addEventListener('mouseover', () => console.log('hello'));
 _Link:_ checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element) documentation for a full list of properties and methods.
 
 ### Events
-
-#### Definition
 
 JavaScript is an **event based language**. Meaning, nothing happens until something is triggered.
 
@@ -1739,8 +1711,6 @@ click2.removeEventListener("click", externalFunc); // Removed click event
 
 ### JSON
 
-#### Definition
-
 JSON stands for **JavaScript Object Notation**.
 
 JSON is a lightweight data-interchange format that a lof of api's use to communicate. It's easy to read and write and is used practically anywhere.
@@ -1794,8 +1764,6 @@ JavaScript provides two methods to help.
 
 ### Destructuring
 
-#### Definition
-
 **Destructuring** provides a more succinct way to unpack values from arrays, or properties from objects, into distinct variables. These can be used as stand alone variables, or a part of function parameters.
 
 ```JavaScript
@@ -1835,8 +1803,6 @@ doSomething( startObj );
 
 ### Spread
 
-#### Definition
-
 **Spread syntax** allows an iterable to be expanded in places where zero or more arguments are expected.
 
 ```JavaScript
@@ -1847,8 +1813,6 @@ console.log( total(numbers) ); // NaN
 ```
 
 ### Rest
-
-#### Definition
 
 **Rest Parameters** allows you to represent an indefinite number of arguments as an array. You can specify any number of parameters and follow the rest at the end of the list. This will always be at the end of the parameter list and will not include the items defined before it.
 
