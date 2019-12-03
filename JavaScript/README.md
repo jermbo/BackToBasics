@@ -22,13 +22,12 @@
   - The DOM
   - Events
 - Advanced Topics
-  - Spread, rest
-  - Mutation vs. immutable
-  - Promises + Async + Await
-  - Design Patterns
-    - Module
-    - Revealing Module
-    - Classes
+  - Destructuring
+  - Spread
+  - Rest
+  - Mutable vs. immutable
+  - Promises
+  - Async + Await
 
 ## Intro
 
@@ -174,12 +173,51 @@ const addTwo = function(num1, num2) {
 
 #### Arrow
 
-**Arrow functions** are syntax sugar and have unique properties to them. (More on why later.)
+An **arrow function expression** is a syntactically compact alternative to regular functions. They are unique as they do not have their own bindings to `this`, `arguments`, `super` or `new.target` keywords.
 
----BUILD ARROW FUNCTION VISUAL---
+Due to the anonymous nature of arrow functions, they must be utilized as an expression or a callback.
+
+A couple of rules to understand are:
+
+1. If one parameter is required, the parenthesis are optional. Zero or more than one, they are required.
+2. If logic can be completed in one line, curly brackets are optional.
+3. If that one line is a `return` statement, the keyword `return` is optional.
+   1. This is know as an implicit return statement. The opposite being explicit.
+
+```JavaScript
+const addTwo = function (num1, num2) {
+  return num1 + num2;
+}
+```
+
+```JavaScript
+const addTwo = (num1, num2) => {
+  return num1 + num2;
+}
+```
 
 ```JavaScript
 const addTwo = (num1, num2) => num1 + num2;
+```
+
+```JavaScript
+const square = function(num) {
+  return num * 2;
+}
+```
+
+```JavaScript
+const square = (num) => {
+  return num * 2
+}
+```
+
+```JavaScript
+const square = (num) => num * 2;
+```
+
+```JavaScript
+const square = num => num * 2;
 ```
 
 #### Invoke
@@ -1526,10 +1564,17 @@ function handelItemClick(e) {
 }
 ```
 
-
 ## Advanced Topics
 
-### Spread, rest
+### Destructuring
+
+#### Definition
+
+### Spread
+
+#### Definition
+
+### Rest
 
 #### Definition
 
@@ -1537,22 +1582,10 @@ function handelItemClick(e) {
 
 #### Definition
 
-### Promises + Async + Await
+### Promises
 
 #### Definition
 
-### Design Patterns
-
-#### Definition
-
-#### Module
-
-#### Definition
-
-#### Revealing Module
-
-#### Definition
-
-#### Classes
+### Async + Await
 
 #### Definition

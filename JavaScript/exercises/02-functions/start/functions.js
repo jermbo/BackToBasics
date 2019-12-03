@@ -27,7 +27,7 @@ function greetHuman() {
 // and the creature. Create a function name and parameter
 // name and the return statement.
 const greetCreature = function(___) {
-  return;
+  return "Greetings " + ___;
 };
 
 // This function will be similar to the one above.
@@ -35,8 +35,8 @@ const greetCreature = function(___) {
 // one for the greeting and the other for the species.
 // Create a function name, and the two parameters,
 // and return the greeting and species
-const ____ = (___, ___) => {
-  return;
+const ___ = (____, _____) => {
+  return ____ + " " + _____;
 };
 
 // This functions purpose is to square a number and
@@ -50,9 +50,9 @@ function ____(___, ___) {
 // Invoke functions here
 console.log(greetHuman());
 
-console.log(____("Dog"));
+console.log(__("Dog"));
 
-console.log(____("Whats up", "Dog"));
+console.log(___("Whats up", "Dog"));
 
 ____(20, function(___) {
   console.log(___);
