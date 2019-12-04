@@ -1107,7 +1107,7 @@ const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
 
 console.log( characters.slice(1, 4) ); // ["Leela", "Bender", "Professor"]
 console.log( characters.slice(2, 2) ); // []
-console.log( characters.slice(0, 3) ); // ["Fry", "Leela", "Bender"]****
+console.log( characters.slice(0, 3) ); // ["Fry", "Leela", "Bender"]
 ```
 
 #### Iterators
@@ -1164,14 +1164,16 @@ console.log( longNames ); // ["Bender", "Professor", "Hermies"]
 ```
 
 ```JavaScript
-var todos = [
+const todos = [
   { id: 1, name: 'Wake up', completed: true },
   { id: 2, name: 'Drink Coffee', completed: true },
   { id: 3, name: 'Code JavaScript', completed: false },
   { id: 4, name: 'Drink more coffee', completed: false }
 ];
-var stillTodo = todos.filter(todo => !todo.completed );
-console.log( stillTodo ); // [{completed: false, id: 3, name: "Code JavaScript"}, {completed: false, id: 4, name: "Drink more coffee" }]
+const stillTodo = todos.filter(todo => !todo.completed );
+console.log( stillTodo );
+// [{completed: false, id: 3, name: "Code JavaScript"},
+// {completed: false, id: 4, name: "Drink more coffee" }]
 ```
 
 #### Mutators
@@ -1187,7 +1189,7 @@ There are a dozen or so methods we have access to, but we are going to explore o
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
 
-console.log( characters.pop() ); //  "Hermies"
+console.log( characters.pop() ); // "Hermies"
 console.log( characters ); // ["Fry", "Leela", "Bender", "Professor"]
 ```
 
@@ -1248,12 +1250,6 @@ Loops are a way to do something repeatedly. Typically these are used to access e
 #### While Loops
 
 A **while** loop executes its statements as long as a specified condition evaluates to true.
-
-```JavaScript
-while ( condition ) {
-  // block of code to be executed
-}
-```
 
 ```JavaScript
 let i;
@@ -1333,7 +1329,7 @@ A **for...of** statement iterates over the values in an **iterable**.
 _Note_: **Iterable** is an object that can be looped over. Arrays, Strings, Maps, Sets, and NodeList are the most used.
 
 ```JavaScript
-const paragraphs = document.querySelectorAll('p'); // This stores a NodeList, which is an Iterable Object.
+const paragraphs = document.querySelectorAll('p');
 
 for( let p of paragraphs ) {
   console.log(p.innerText);
@@ -1996,5 +1992,5 @@ fetch("https://jsonplaceholder.typicode.com/users/3", {
     console.log(data);
     // { id: 2, username: "Elon Musk", email: "elonmusk@gmail.com" }
   })
-  .catch(err=> { console.log(err)})
+  .catch(err=> { console.log(err) })
 ```
