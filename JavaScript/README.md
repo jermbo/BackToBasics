@@ -2,6 +2,9 @@
 
 ## Table of Contents
 
+- Intro
+- Who is this for?
+- What to expect?
 - Language Fundamentals
   - Variables
     - Variable Types
@@ -97,13 +100,9 @@
     - Rules
     - Demystifying
   - Destructuring
-    -
   - Spread
-    -
   - Rest
-    -
   - Promises
-    -
 
 ## Intro
 
