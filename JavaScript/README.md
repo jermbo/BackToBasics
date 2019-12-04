@@ -148,11 +148,11 @@ In JavaScript we have three ways to declare a variable.
 
 **var** **let** **const**
 
-var - is the traditional way to declaring a variable. This is function scoped and has some unique quirks about it. It's generally best to not use this, unless you have to support a older browser.
+_var_ - is the traditional way to declaring a variable. This is function scoped and has some unique quirks about it. It's generally best to not use this, unless you have to support a older browser.
 
-let - introduced in ES6, and is the replacement to var. This is blocked scoped and acts like you expect it to. Its main benefit over var is you cannot redeclare a let with the same name.
+_let_ - introduced in ES6, and is the replacement to var. This is blocked scoped and acts like you expect it to. Its main benefit over var is you cannot redeclare a let with the same name.
 
-const - introduced in ES6, and should be the first way you should utilize unless absolutely needed. It has same characteristics as let, in addition it cannot be reassigned and must contain an initial value.
+_const_ - introduced in ES6, and should be the first way you should utilize unless absolutely needed. It has same characteristics as let, in addition it cannot be reassigned and must contain an initial value.
 
 #### Naming Rules
 
@@ -180,6 +180,7 @@ Lastly, choose meaningful names. Code is for you and other humans. It's importan
 To define a variable you use the keyword **let** or **const** and give it a name.
 
 ```JavaScript
+// ----------------
 // Good Examples
 let userName;
 let is_logged_in = false;
@@ -191,6 +192,7 @@ let userName = 'Bender'; // Error: variable already exists
 currentYear = new Date(); // Error: cannot reassign constants
 PlacesToVisit.push('New York'); // ['Florida', 'Ohio', 'California', 'New York']
 
+// ----------------
 // Bad Examples
 let cliu; // Current Logged In User
 const positionX = 'London'; // What's the connection?
@@ -221,7 +223,7 @@ There are a couple of different ways to write a function. Here are a some more c
 Simply put, an **anonymous** function is a function without a name.
 
 ```JavaScript
-(function(){
+(function() {
   // do stuff
 })();
 ```
@@ -513,7 +515,9 @@ function makeCoffee( type, additions ) {
   return `Your ${type} with ${additions.join(' ')} is ready. Enjoy!`;
 }
 console.log( makeCoffee('coffee', [] ));
-console.log( makeCoffee('latte', ['cream', 'sugar'] ));
+// Your coffee with is ready. Enjoy!
+console.log( makeCoffee('latte', ['cream', 'sugar'] )); 
+// Your latte with cream sugar is ready. Enjoy!
 ```
 
 ```JavaScript
@@ -612,12 +616,13 @@ UserInterface();
 Variables declared inside a function are in it's scope and cannot be access outside that function.
 
 ```JavaScript
-function scope() {
+function scoped() {
+  // Function Scope
   const inside = 'Yep, I am inside scope';
   console.log(inside); // "Yep, I am inside scope"
 }
-scope();
-
+scoped();
+// Global Scope
 console.log(inside); // Reference Error: inside is not defined.
 ```
 
@@ -629,8 +634,10 @@ Introduced in ES6, a **block scope** is the area within curly brackets. Typicall
 
 ```JavaScript
 function futurama() {
+  // Function Scope
   const isAwesome = true;
   if(isAwesome) {
+    // Block Scope
     var character1 = 'Fry';
     let character2 = 'Bender';
     const character3 = 'Leela';
@@ -646,9 +653,9 @@ function futurama() {
 
 |                              | var      | let   | const |
 | ---------------------------- | -------- | ----- | ----- |
-| reassigned                   | o        | o     | x     |
+| reassigned                   | yes      | yes   | no    |
 | Scope                        | function | block | block |
-| Reference before declaration | o        | x     | x     |
+| Reference before declaration | yes      | no    | no    |
 
 ### Objects
 
