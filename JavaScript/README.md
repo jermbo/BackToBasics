@@ -29,7 +29,7 @@
     - Local
     - Function
     - Block
-    - Comparision Table
+    - Comparison Table
   - Objects
     - Properties and Methods
     - Dot Notation
@@ -103,6 +103,7 @@
   - Spread
   - Rest
   - Promises
+  - Fetch API
 
 ## Intro
 
@@ -516,7 +517,7 @@ function makeCoffee( type, additions ) {
 }
 console.log( makeCoffee('coffee', [] ));
 // Your coffee with is ready. Enjoy!
-console.log( makeCoffee('latte', ['cream', 'sugar'] )); 
+console.log( makeCoffee('latte', ['cream', 'sugar'] ));
 // Your latte with cream sugar is ready. Enjoy!
 ```
 
@@ -1883,10 +1884,117 @@ makeCoffee('coffee', ['cream', 'sugar'])
   });
 ```
 
+### Fetch API
+
+The **Fetch API** is a promised based API that provides an interface for interacting asynchronously with resources across the network. This is similar to what AJAX offers, with a modern differences.
+
+#### CRUD
+
+**CRUD** is a term used to simplify how one interacts with an API or DataBase. CRUD stands for **Create**, **Read**, **Update**, **Delete**.
+
+With any given action, there are associated **HTTP Verbs**.
+
+- Create — POST
+- Read — GET
+- Update — PUT/PATCH
+- Delete — DELETE
+
+#### Put vs Patch
+
+There are two ways to update a document. Put and Patch. The goal of each one is to update an existing record with new information. The difference being, PUT replaces everything with exactly what is sent. Where as PATCH will update the corresponding fields.
+
 ```JavaScript
-fetch('https://sampleapis.com/futurama/characters')
+// Record in database to start
+{
+  id: 1,
+  userName: 'Bender',
+  email: 'bender@bender.com',
+  species: 'Robot'
+}
+
+// PUT
+{
+  id: 1,
+  userName: 'Bender2999';
+}
+
+// Record in database after update
+{
+  id: 1,
+  userName: 'Bende2999'
+}
+```
+
+```JavaScript
+// Record in database to start
+{
+  id: 1,
+  userName: 'Bender',
+  email: 'bender@bender.com',
+  species: 'Robot'
+}
+
+// PATCH
+{
+  id: 1,
+  userName: 'Bender2999';
+}
+
+// Record in database after update
+{
+  id: 1,
+  userName: 'Bender2999',
+  email: 'bender@bender.com',
+  species: 'Robot'
+}
+```
+
+_Note_ There is a lot to dive into with Fetch API, let's jump right into examples.
+
+```JavaScript
+// Simple GET from API
+fetch('https://jsonplaceholder.typicode.com/users')
   .then(resp => resp.json())
   .then(data => {
-    console.log(data); // (15) [{...},{...},{...},...]
+    console.log(data); // (10) [{...},{...},{...},...]
   });
+```
+
+```JavaScript
+// Add User to the data
+fetch("https://jsonplaceholder.typicode.com/users", {
+  headers: { "Content-Type": "application/json; charset=utf-8" },
+  method: "POST",
+  body: JSON.stringify({
+    username: "Elon Musk",
+    email: "elonmusk@gmail.com"
+  })
+})
+  .then(resp => {
+    console.log(resp);
+    return resp.json();
+  })
+  .then(data => {
+    console.log(data);
+    // { id: 11, username: "Elon Musk", email: "elonmusk@gmail.com" }
+  });
+```
+
+```JavaScript
+fetch("https://jsonplaceholder.typicode.com/users/3", {
+  headers: { "Content-Type": "application/json; charset=utf-8" },
+  method: "PUT",
+  body: JSON.stringify({
+    username: "Elon Musk",
+    email: "elonmusk@gmail.com"
+  })
+})
+  .then(resp => {
+    return resp.json();
+  })
+  .then(data => {
+    console.log(data);
+    // { id: 2, username: "Elon Musk", email: "elonmusk@gmail.com" }
+  })
+  .catch(err=> { console.log(err)})
 ```
