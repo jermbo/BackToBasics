@@ -667,12 +667,9 @@ Another example would be a **person**. A person has properties such as; **firstN
 
 ```JavaScript
 const myCar = {
-  model: 'I-280',
-  make: 'Izuzu',
-  year: 2011,
-  color: 'Black',
-  transmission: 'standard',
-  numberOfWheels: 4,
+  model: 'I-280', make: 'Izuzu',
+  year: 2011, color: 'Black',
+  transmission: 'standard', numberOfWheels: 4,
   accelerate: () => {
     // make car go faster
   },
@@ -687,10 +684,8 @@ const myCar = {
 
 ```JavaScript
 const person = {
-  firstName: "John",
-  lastName: "Doe",
-  health: 50,
-  energy: 47,
+  firstName: "John", lastName: "Doe",
+  health: 50, energy: 47,
   fullName: function() {
     return `${this.firstName} ${this.lastName}`;
   },
@@ -704,7 +699,6 @@ const person = {
     } else {
       this.energy += 10;
     }
-
     return this.energy;
   }
 };
@@ -763,12 +757,12 @@ const special = {
 };
 
 // Incorrect
-// Cannot access a key with a space
 console.log(special.Key One);
-// Cannot access a key with a dash
+// Cannot access a key with a space
 console.log(special.Key-ID);
-// Cannot access a key with a dot
+// Cannot access a key with a dash
 console.log(special.the.func);
+// Cannot access a key with a dot
 
 // Correct
 console.log(special['Key One']); // "The First Value"
@@ -795,7 +789,7 @@ A **string** is any set of characters **between quotes**, either single or quote
 You can use either at any time, just be aware **what you start with you must end with**.
 
 ```JavaScript
-console.log('hello');
+console.log('hello'); // String Literal
 
 const userName = "Bender";
 console.log( userName ); // "Bender"
