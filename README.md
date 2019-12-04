@@ -121,7 +121,7 @@ Above all, I am a husband and father.
 
 ## Who is this course for?
 
-This corse is designed to reintroduce you to concepts that you might be using on a daily basis but don't really understand why.
+This course is designed to reintroduce you to concepts that you might be using on a daily basis but don't really understand why.
 
 This is targeted towards individuals who have been using JavaScript for one to three years who want to take their knowledge to the next level.
 
@@ -132,6 +132,10 @@ In each section you will be introduced to a topic, provided a definitions, examp
 The exercises are intended to reinforce what was just learned. Please refer to the slides of that section for reference. We will be walking around to offer assistance if needed.
 
 All the code and topics covered will be for native browser implementation. No build tools will be required nor will any server code be created.
+
+While some sections are stand alone to cover the topic at hand, there are sections that utilize topics that were previously explained.
+
+At the end of the lecture, you will have all the information necessary to complete the final project.
 
 ## Language Fundamentals
 
@@ -145,15 +149,17 @@ It's a **symbolic** name given to a **known**, or **unknown**, quantity that per
 
 #### Variable Types
 
-In JavaScript we have three ways to declare a variable.
+There are three ways to declare a variable.
 
 **var** **let** **const**
 
-_var_ - is the traditional way to declaring a variable. This is function scoped and has some unique quirks about it. It's generally best to not use this, unless you have to support a older browser.
+_var_ - is the traditional way to declare a variable. This is function scoped and has some unique quirks about it. ( It’s generally best to not use this, unless you have to support older browsers. )
 
-_let_ - introduced in ES6, and is the replacement to var. This is blocked scoped and acts like you expect it to. Its main benefit over var is you cannot redeclare a let with the same name.
+_let_ - introduced in ES6. This is blocked scoped and acts like you expect a normal variable to act. Its main benefit over var is you cannot redeclare a let with the same name.
 
-_const_ - introduced in ES6, and should be the first way you should utilize unless absolutely needed. It has same characteristics as let, in addition it cannot be reassigned and must contain an initial value.
+_const_ - introduced in ES6. This has similar characteristics as let. The main difference is that const cannot be reassigned.
+
+_Note_ General rule of thumb is to use **const** everywhere, only changing to **let** if absolutely necessary.
 
 #### Naming Rules
 
@@ -166,17 +172,17 @@ When **naming** a **variable** there are some rules you need to be aware of.
 
 #### Style Rules
 
-You will run into different styles for naming a variable. I want to take a minute and list out and define the most common ones.
+You will run into different styles for naming a variable. Here is a list of common ones you might come across in the wild.
 
 - **Camel Case** is a compound word where the first word is all lowercase, and the first letter of each following word is capitalized. For example; `currentUser` `totalBalance` `playerPositionX` `currentDashboardState`
 - **Pascal Case** is a compound word where the first letter of every word is capitalized and the rest are lower cased.
-- **Snake Case** is the practice of writing compound in which the elements are separated with one underscore.
+- **Snake Case** is a compound word where all characters are lowercase and each word is separated by an underscore ( \_ ).
 
-Outside the **Naming Rules**, style choices are completely optional and up to you. My general advice is, pick one and stick with it. Consistency is way more important than any given style.
+Outside the **Naming Rules**, style choices are completely optional. Whichever you choose, be **consistent**. **Consistency** is way more important than any given style.
 
-Lastly, choose meaningful names. Code is for you and other humans. It's important to write code as human understandable as possible. Avoid abbreviations only you know, or obscure names that don't fit the context of the code you are creating, or giving a name that does not represent the data it is storing.
+Choose meaningful names. Code is for you and other humans. It's important to write code as humanly understandable as possible. Avoid abbreviations only you know, or obscure names that don't fit the context of the code you are creating, or creating a name that does not represent the data it's storing.
 
-#### Examples
+#### Variable Examples
 
 To define a variable you use the keyword **let** or **const** and give it a name.
 
@@ -231,7 +237,7 @@ Simply put, an **anonymous** function is a function without a name.
 
 #### Declaration
 
-A **function declaration** is a function with a **name**. These follow very similar rules to variables and can be called later in your code by referring to the name provided.
+A **function declaration** is a function with a **name**. These follow very similar naming rules to variables and can be called later in your code by referring to the name provided.
 
 ```JavaScript
 function addTwo(num1, num2) {
@@ -257,7 +263,7 @@ Due to the anonymous nature of arrow functions, they must be utilized as an expr
 
 A couple of rules to understand are:
 
-1. If one parameter is required, the parenthesis are optional. Zero or more than one, they are required.
+1. If one parameter is required, the parentheses are optional. Zero or more than one, they are required.
 2. If logic can be completed in one line, curly brackets are optional.
 3. If that one line is a `return` statement, the keyword `return` is optional.
    1. This is know as an implicit return statement. The opposite being explicit.
@@ -582,7 +588,7 @@ gerCharacter();
 
 #### Local
 
-When declaring a variable inside a function, you are declaring it in a **local scope**. Every function has its own scope, so if you declare the same variable inside different functions you will not have an issue.
+When declaring a variable inside a function, you are declaring it in a **local scope**. Every function creates its own scope, so declaring the same variables in different functions will not cause issues.
 
 ```JavaScript
 // Global Scope
@@ -713,7 +719,7 @@ console.log(person.sleep()); // 100
 
 #### Properties and Methods
 
-**Properties** are like a variable, they store a value. Your care might have a different make, so your cars **_make_ property** will reflect accordingly.
+**Properties** are like a variable, they store a value. Your car might have a different make, so your cars **make property** will reflect accordingly.
 
 **Methods** are like functions, they do something. Again, since your car is different, the type and amount of fuel you require will be different.
 
@@ -798,7 +804,7 @@ console.log( userName ); // "Bender"
 
 #### Concatenation
 
-**Concatenation** is the operation of join character strings end-to-end.
+**Concatenation** is the operation of joining character strings end-to-end.
 
 ```JavaScript
 console.log('Futur' + "ama"); // "Futurama"
@@ -840,7 +846,7 @@ const postsHTML = posts.map((post, index) => {
 }).join('');
 ```
 
-_Note_ Pretty much everything can be thought of as an object in JavaScript. **String** is no exception, as this has a set of **properties** and **methods** at your disposal.
+_Note_ Pretty much everything can be thought of as an object in JavaScript. **String** is no exception, as this has a set of **properties** and **methods** associated with them.
 
 #### Length Property
 
@@ -938,7 +944,7 @@ console.log(123e-5); // 0.00123
 
 **.parseInt()** takes a string argument and returns an integer.
 
-This method will convert the string to a whole number, regardless of decimals that might exist. If alpha characters will be ignored and will terminate the rest of that parse at first sign.
+This method will convert the string to a whole number, regardless of decimals that might exist. If non-number characters are encountered they will be ignored and terminate the rest of parse at first sign.
 
 ```JavaScript
 const age = '123';
@@ -978,7 +984,7 @@ _Note_ When pulling **anything** from an input field, it will be a **string**. U
 
 #### toFixed
 
-**.toFixed()** formats a number to a desired decimal length. This method requires the number of decimals places you want as its only argument.
+**.toFixed()** formats a number to a desired decimal length. This method requires the desired decimal length as its only argument.
 
 ```JavaScript
 const price = 23;
@@ -1014,7 +1020,7 @@ Notice all the arithmetic operations kinda work as expected, except for one.
 
 This is because the symbol used for addition is the same symbol used for concatenation.
 
-As JavaScript developers we run into this all the time. When we get to the logic section, we will see how this plays out in a different way.
+As JavaScript developers we **run into this all the time**. When we get to the logic section, we will see how this plays out in a different way.
 
 ### Arrays
 
@@ -1032,9 +1038,9 @@ Creating variables is fine, but this can get out of hand quickly. Are you going 
 
 Short answer, you can't. This is where arrays come into play.
 
-**Arrays** are used to store **multiple values** iin a **single variable**.
+**Arrays** are used to store **multiple values** in a **single variable**.
 
-Let's reconsider the previous example and make it an array.
+Let's reconsider the previous example as an array.
 
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
@@ -1046,7 +1052,7 @@ _Note_ Array indexing starts a **zero**. The **first index** in the array reflec
 
 #### Array Methods
 
-As most things in JavaScript, **Arrays** are object like. Meaning, we have access to a set of **properties** and **methods** at our disposal.
+As most things in JavaScript, **Arrays** are object like. Meaning, we have access to a set of **properties** and **methods** to interact with the data.
 
 We can break down each Array method into three categories.
 
@@ -1056,9 +1062,9 @@ We can break down each Array method into three categories.
 
 #### Accessors
 
-These sets of methods do not modify the original array, instead they return some representation of the array in use.
+These sets of methods **do not modify** the original array, instead they **return** some representation of the array in use.
 
-There are a dozen or so methods one has access to, but we are going to explore the ones I tend to use most frequently in day to day work.
+There are a dozen or so methods, but we are going to explore the ones I tend to use most frequently in day to day work.
 
 ##### includes
 
@@ -1086,9 +1092,9 @@ console.log( characters.indexOf('Professor') ); // 3
 console.log( characters.indexOf('Zapp') ); // -1
 ```
 
-##### Join
+##### join
 
-This method **joins** all the elements of an array into a **string**, separating the values by the provided **string separator**. If no separator is passed, then the items will be separated with commas.
+This method **joins** all the elements of an array into a **string**, separating the values by the provided **string separator**, and defaults to commas if not provided.
 
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
@@ -1098,7 +1104,7 @@ console.log( characters.join(' ') ); // "Fry Leela Bender Professor Hermies"
 console.log( characters.join('--') ); // "Fry--Leela--Bender--Professor--Hermies"
 ```
 
-##### Slice
+##### slice
 
 This method returns a **shallow portion** of an array into a **new array**, selected from a **starting index** to an **ending index**, ending index not included.
 
@@ -1118,7 +1124,7 @@ There are a dozen or so methods one has access to, but we are going to explore o
 
 _Note:_ Each callback will be passed these three arguments, regardless if they are used or not. **CurrentValue**, **index**, **Original Array**.
 
-##### ForEach
+##### forEach
 
 **.forEach()** **executes** a provided function once for **each element** in the array.
 
@@ -1130,7 +1136,7 @@ characters.forEach( ( character ) => {
 });
 ```
 
-##### Map
+##### map
 
 **.map()** creates a **new array** with the results from the callback on every element in the array.
 
@@ -1152,9 +1158,9 @@ const todoNames = todos.map(todo => todo.name);
 console.log( todoNames ); // ["Wake up", "Drink Coffee", "Code JavaScript", "Drink more coffee"]
 ```
 
-##### Filter
+##### filter
 
-**.filter()** creates a new array with all the elements that **pass the test** in the provided callback.
+**.filter()** creates a **new array** with all the elements that **pass the test** in the provided callback.
 
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
@@ -1178,7 +1184,7 @@ console.log( stillTodo );
 
 #### Mutators
 
-**Mutators** are a set of methods that change the original array and returns the information what was changed.
+**Mutators** are a set of methods that **change the original array** and **returns** the information what was changed.
 
 There are a dozen or so methods we have access to, but we are going to explore ones I use most frequently in my day to day.
 
@@ -1247,7 +1253,7 @@ console.log(characters); // ["Fry", "Leela", "Bender"]
 
 Loops are a way to do something repeatedly. Typically these are used to access each item in an array, but they have other use cases as well.
 
-#### While Loops
+#### while loops
 
 A **while** loop executes its statements as long as a specified condition evaluates to true.
 
@@ -1286,14 +1292,14 @@ for( let i = 0; i < 10; i++ ) {
 }
 ```
 
-There are 5 steps that execute when a for loop runs.
+There are **4 steps** that execute when a for loop runs.
 
 1. The `initialExpression` is executed. ( That's the `let i = 0` part. )
 2. The `condition` gets evaluated. ( That's the `i < 10` part. )
-   - If the condition is evaluated to true, it executes the block. ( The block being the stuff between the `{}`. )
+   - If the condition is evaluated to true, move to step 3.
    - If the condition is evaluated to false, the loops terminates.
 3. The statement executes the block. ( The block being the stuff between the `{}`. )
-4. The `incrementExpression` is executed. ( Thats the `i++` part. )
+4. The `incrementExpression` is executed. ( That's the `i++` part. )
 
 ```JavaScript
 const characters = ['Fry', 'Leela', 'Bender', 'Professor', 'Hermies'];
@@ -1326,8 +1332,6 @@ for (let key in oldCar) {
 
 A **for...of** statement iterates over the values in an **iterable**.
 
-_Note_: **Iterable** is an object that can be looped over. Arrays, Strings, Maps, Sets, and NodeList are the most used.
-
 ```JavaScript
 const paragraphs = document.querySelectorAll('p');
 
@@ -1343,6 +1347,8 @@ for( let char of name ) {
   console.log(char);
 }
 ```
+
+_Note_: **Iterable** is an object that can be looped over. Arrays, Strings, Maps, Sets, and NodeList.
 
 ### Comparisons and Conditions
 
@@ -1462,17 +1468,18 @@ console.log( false <= 0); // true
 
 There are countless situations where we need **multiple values** to be true in order to execute some come. Or **only one condition** out of a set of possible conditions needs to be true.
 
-We have two operators at our disposal, **And** ( && ). **Or** ( || ).
+**And** ( && ). **Or** ( || ).
 
 ##### And Operator
 
-**And** operator validates to true if all conditions evaluate to true.
+**And** operator evaluates to true if all conditions evaluate to true.
 
 For example, only display a message that the account balance is low when; user is logged in **and** balance is less than one hundred dollars.
 
 ```JavaScript
 const isLoggedIn = true;
 const balance = 500;
+
 if( isLogged && balance < 100 ){
     console.log( `Greetings. Your low limit balance has been triggered. Your
      balance is currently $${balance}.`);
@@ -1481,7 +1488,7 @@ if( isLogged && balance < 100 ){
 
 ##### Or Operator
 
-**Or** operator validates to true if one condition evaluate to true.
+**Or** operator evaluates to true if one condition evaluate to true.
 
 For example, display a special user score animation if; the user sets a new high school **or** game is over.
 
@@ -1526,10 +1533,14 @@ The specified selector is any valid css selector.
 ```
 
 ```JavaScript
-document.querySelector('#infoArea'); // looking for one element with that id
-document.querySelector('p'); // looking for the first paragraph on the page
-document.querySelector('[type=”text”]'); // looking for the first text input field on the page
-document.querySelector('.btn'); // looking for the first class of btn
+document.querySelector('#infoArea');
+// looking for one element with that id
+document.querySelector('p');
+// looking for the first paragraph on the page
+document.querySelector('[type=”text”]');
+// looking for the first text input field on the page
+document.querySelector('.btn');
+// looking for the first class of btn
 ```
 
 #### querySelectorAll()
@@ -1545,15 +1556,20 @@ document.querySelector('.btn'); // looking for the first class of btn
 ```
 
 ```JavaScript
-document.querySelectorAll('#infoArea'); // looking for all elements with that id. ( This is bad practice as ids should be unique, but it can be done. )
-document.querySelectorAll('p'); // looking for all the paragraphs on the page
-document.querySelectorAll('[type=”text”]'); // looking for all the text input fields on the page
-document.querySelectorAll('.btn'); // looking for all items with class of btn on the page
+document.querySelectorAll('#infoArea');
+// looking for all elements with that id.
+// ( This is bad practice as ids should be unique, but it can be done. )
+document.querySelectorAll('p');
+// looking for all the paragraphs on the page
+document.querySelectorAll('[type=”text”]');
+// looking for all the text input fields on the page
+document.querySelectorAll('.btn');
+// looking for all items with class of btn on the page
 ```
 
 #### Caching the DOM
 
-Looking though the DOM is an expensive task. Meaning, process to execute it is high. We can mitigate a bit by **caching** the DOM.
+Looking through the DOM is an expensive task. Meaning, process to execute it is high. We can mitigate a bit by **caching** the DOM.
 
 That simply means, store it in a variable for later use.
 
@@ -1599,7 +1615,7 @@ nameDisplay.classList.add('special');
 nameDisplay.addEventListener('mouseover', () => console.log('hello'));
 ```
 
-_Link:_ checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element) documentation for a full list of properties and methods.
+_Link:_ Checkout the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element) documentation for a full list of properties and methods.
 
 ### Events
 
@@ -1607,7 +1623,9 @@ JavaScript is an **event based language**. Meaning, nothing happens until someth
 
 When you are browsing the web, your browser registers different types of events. It's the browsers way of saying, "Hey! This just happened. Do something if you want.", and your script can respond to that.
 
-The browser has a huge list of events that you can listen for. Take a look at [MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list.
+_Link_ The browser has a huge list of events that you can listen for. Take a look at [MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list.
+
+_Link_ Checkout the [w3Schools](https://www.w3schools.com/jsref/dom_obj_event.asp) documentation for a full list of events.
 
 #### Types of Events
 
@@ -1634,7 +1652,7 @@ The **Mouse Event** interface represents events that occur due to the user inter
 
 ##### Touch Events
 
-The **Touch Event** interface represents an event sent when the state of contacts with a touch-sensitive surface changes. This surface and be a touch screen or a track pad. Some events often used;
+The **Touch Event** interface represents an event sent when the state of contacts with a touch-sensitive surface changes. This surface and be a touch screen or a trackpad. Some events often used;
 
 - touchstart
 - touchend
@@ -1724,7 +1742,7 @@ click2.removeEventListener("click", externalFunc); // Removed click event
 
 JSON stands for **JavaScript Object Notation**.
 
-JSON is a lightweight data-interchange format that a lof of api's use to communicate. It's easy to read and write and is used practically anywhere.
+JSON is a lightweight data-interchange format that a lot of api's use to communicate. It's easy to read and write and is used practically anywhere.
 
 JSON is a subset of JavaScript and there are stricter rules on its syntax.
 
@@ -1765,6 +1783,8 @@ JSON is a subset of JavaScript and there are stricter rules on its syntax.
 }
 ```
 
+#### JSON Parse and Stringify
+
 Since JSON is a subset of JavaScript, if you want to use it you might have to convert it from JSON to an object that JavaScript can utilize.
 
 On the flip side, if you want to save an object to a JSON api, you need to convert it to a JSON object.
@@ -1777,7 +1797,7 @@ JavaScript provides two methods to help.
 
 Often times, when dealing with data sets, they idea of looking at a complicated set of dots and square brackets can make things looks more scary than they really are. One approach I take is to look at the individual sections, determine what it is, then make a decision on what to do next.
 
-For example, lets figure out what the second ingredient of the third beer in the [BeerApi](https://punkapi.com/documentation/v2).
+For example, let's figure out what the second ingredient of the third beer in the [BeerApi](https://punkapi.com/documentation/v2).
 
 Lets look at this data from the api, [https://api.punkapi.com/v2/beers?per_page=10](https://api.punkapi.com/v2/beers?per_page=10)
 
@@ -1861,7 +1881,7 @@ The **Promise** object represents the eventual completion, or failure, of an asy
 function makeCoffee(type = 'coffee', additions = []) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(`Your ${type} is ready with ${additions.join(' ')}. Enjoy!`)
+      resolve(`Your ${type} is ready with ${additions.join(' ')}. Enjoy!`);
     }, 1000);
   });
 }
@@ -1869,11 +1889,11 @@ function makeCoffee(type = 'coffee', additions = []) {
 makeCoffee('coffee', ['cream', 'sugar'])
   .then(coffee => {
     console.log(coffee);
-    return makeCoffee('latte', ['skim milk', 'stevia'])
+    return makeCoffee('latte', ['skim milk', 'stevia']);
   })
   .then(coffee => {
     console.log(coffee);
-    return makeCoffee('cold brew', ['hazelnut creamer', 'stevia', 'instant espresso shot'])
+    return makeCoffee('cold brew', ['hazelnut creamer', 'stevia', 'instant espresso shot']);
   })
   .then(coffee => {
     console.log(coffee);
@@ -1917,7 +1937,7 @@ There are two ways to update a document. Put and Patch. The goal of each one is 
 // Record in database after update
 {
   id: 1,
-  userName: 'Bende2999'
+  userName: 'Bender2999'
 }
 ```
 
@@ -1985,12 +2005,10 @@ fetch("https://jsonplaceholder.typicode.com/users/3", {
     email: "elonmusk@gmail.com"
   })
 })
-  .then(resp => {
-    return resp.json();
-  })
+  .then(resp => resp.json())
   .then(data => {
     console.log(data);
     // { id: 2, username: "Elon Musk", email: "elonmusk@gmail.com" }
   })
-  .catch(err=> { console.log(err) })
+  .catch(err=> { console.log(err) });
 ```
