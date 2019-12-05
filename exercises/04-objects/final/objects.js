@@ -30,7 +30,7 @@
 // --------------------------------------------------------------
 
 // Create car object here
-var myCar = {
+const myCar = {
   model: "I-280",
   make: "Izuzu",
   year: 2011,
