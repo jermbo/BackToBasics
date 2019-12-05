@@ -39,7 +39,7 @@ var myCar = {
   numberOfWheels: 4,
   accelerate: () => {
     // make car go faster
-    console.log("vehicle is going faster");
+    console.log("vehicle is speeding up");
   },
   decelerate: () => {
     // make car go slower
@@ -47,7 +47,7 @@ var myCar = {
   },
   addFuel: type => {
     // add fuel type to tank
-    console.log("Filled take with " + type + " of gas.");
+    console.log(`Filled take with ${type} of gas.`);
   },
   turnRadioOn: () => {
     console.log("Radio is now on");
@@ -56,7 +56,7 @@ var myCar = {
     console.log("Radio is now off");
   },
   changeStation: whichStation => {
-    console.log("You are now listening to " + whichStation);
+    console.log(`You are now listening to ${whichStation}`);
   }
 };
 

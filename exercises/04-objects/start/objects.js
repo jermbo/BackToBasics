@@ -33,7 +33,7 @@
 var myCar = {
   model: "I-280",
   accelerate: function() {
-    console.log("vehicle is speeing up");
+    console.log("vehicle is speeding up");
   }
 };
 
