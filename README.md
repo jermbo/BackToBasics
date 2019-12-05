@@ -1,110 +1,5 @@
 # JavaScript - Back to Basics
 
-## Table of Contents
-
-- Intro
-- Who is this for?
-- What to expect?
-- Language Fundamentals
-  - Variables
-    - Variable Types
-    - Naming Rules
-    - Style Rules
-    - Examples
-    - Var Exercises
-  - Functions
-    - Anonymous
-    - Declaration
-    - Expression
-    - Arrow
-    - Paramters / Arguments
-    - Callbacks
-      - CB Example Alert
-      - CB Example Anonymous
-      - CB Example Declaration
-    - Default Parameters
-    - Function Exercises
-  - Scope
-    - Global
-    - Local
-    - Function
-    - Block
-    - Comparison Table
-  - Objects
-    - Properties and Methods
-    - Dot Notation
-    - Bracket Notation
-    - Bracket Notation Use Case 1
-    - Bracket Notation Use Case 2
-  - Strings
-    - Concatenation
-    - Template Literals
-    - Length Property
-    - toUpperCase
-    - toLowerCase
-    - trim
-    - Chainable
-    - split
-  - Numbers
-    - parseInt
-    - parseFloat
-    - toFixed
-  - Coercion
-  - Arrays
-    - Array Methods
-    - Accessors
-      - includes
-      - indexOf
-      - join
-      - slice
-    - Iterators
-      - forEach
-      - map
-      - filter
-    - Mutators
-      - pop
-      - push
-      - shift
-      - unshift
-      - splice
-  - Looping
-    - While Loops
-    - For Loops
-    - For ... in loops
-    - For ... of loops
-  - Conditions
-    - == vs ===
-    - != vs !==
-    - > vs <
-    - > = vs <=
-    - Logic Operators
-      - And
-      - Or
-  - The DOM
-    - Select Elements
-      - querySelector
-      - querySelectorAll
-    - Caching the DOM
-    - Properties on the DOM
-  - Events
-    - Types of Events
-      - Mouse Events
-      - Touch Events
-      - Keyboard Events
-      - Form Events
-      - Window Events
-    - Add Event Listener
-    - Remove Event Listener
-- Advanced Topics
-  - JSON
-    - Rules
-    - Demystifying
-  - Destructuring
-  - Spread
-  - Rest
-  - Promises
-  - Fetch API
-
 ## Intro
 
 My name is Jeremy "Jermbo" Lawson. You can find me on Twitter and GitHub @jermbo
@@ -1323,8 +1218,8 @@ const myCar = {
   year: '2011'
 };
 
-for (let key in oldCar) {
-  console.log(`${key} --> ${oldCar[key]}`);
+for (let key in myCar) {
+  console.log(`${key} --> ${myCar[key]}`);
 }
 ```
 
@@ -1734,6 +1629,25 @@ function externalFunc(e) {
 
 click1.removeEventListener("click", () => {}); // Still active
 click2.removeEventListener("click", externalFunc); // Removed click event
+```
+
+#### Event Object
+
+Different Events have different information associated with them. Every event that is triggered will generate an **Event Object** and will be passed to the function that executes when the event is triggered.
+
+```JavaScript
+document.addEventListener('keypress', function(e) {
+  console.log(e.key);
+});
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
+  console.log(e.target.innerText);
+});
+btn.addEventListener('mouseenter', function(e) {
+  console.log(`x: ${e.clientX} - y: ${e.clientY}`);
+})
 ```
 
 ## Advanced Topics
