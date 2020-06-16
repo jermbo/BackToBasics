@@ -10,7 +10,7 @@ I host several events and meetups. Palm Beach JavaScript, BocaJS, and Palm Beach
 
 I help run a non-profit dedicated to teaching kids to code called Code Palm Beach.
 
-I am a FrontEnd Tech Lead and Community Lead at Cognizant Softvision.
+I am a FrontEnd Tech Lead and Community Lead at Cognizant SoftVision.
 
 Above all, I am a husband and father.
 
